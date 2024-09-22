@@ -20,6 +20,7 @@ body{
 
     & .container{
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -55,7 +56,7 @@ body{
                         text-decoration: none;
                         text-transform: uppercase;
                         text-align: center;
-                        
+                        width: 100%;
                     }
 
                     &:hover::after{
@@ -105,6 +106,44 @@ body{
             }
         }
         
+
+        /* Estilizando a parte do cronometro */
+
+        & .time-cro{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .stopwatch{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: var(--cor05);
+                width: 600px;
+                height: 200px;
+                border-radius: 10px;
+                /* box-shadow: 1px 1px 20px 1px var(--cor05); */
+
+                & .time-stop{
+                    font-size: 80px;
+                    margin: 20px 0;
+                }
+
+                & .btn {
+                    width: 90px;
+                    height: 40px;
+                    cursor: pointer;
+                    border: none;
+                    margin: 0 5px;
+                    border-radius: 5px;
+                    &:hover{
+                        background-color: var(--cor02);
+                        color: var(--cor05);
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -125,4 +164,14 @@ body{
         width: 100%;
         left: 0;
     }
+}
+
+
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: block;
 }
