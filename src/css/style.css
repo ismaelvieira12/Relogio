@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor01: #090909;
+    --cor02: #4b5043;
+    --cor03: #D3FFE9;
+    --cor04: #9BC4BC;
+    --cor05: #8DDBE0;
+}
+
+body{
+    background-image:linear-gradient(45deg, var(--cor01), var(--cor02)) ;
+}
