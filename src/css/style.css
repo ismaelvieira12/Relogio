@@ -17,7 +17,7 @@
 }
 
 .show{
-    display: flex !important;
+    display: block !important;
 }
 
 body{
