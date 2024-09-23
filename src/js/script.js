@@ -12,4 +12,5 @@ relogio.addEventListener('click', () => {
 cronometro.addEventListener('click', () => {
     timeCro.classList.add('show');
     boxTime.classList.add('hidden');
+    console.log('Teste');
 })
