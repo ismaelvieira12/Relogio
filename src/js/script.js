@@ -5,11 +5,11 @@ const timeCro = document.querySelector('.time-cro');
 
 
 relogio.addEventListener('click', () => {
-    boxTime.classList.add('show');
-    console.log('Teste');
+   boxTime.classList.add('show');
+   timeCro.style.display="none";
 });
 
 cronometro.addEventListener('click', () => {
-    timeCro.classList.add('hidden');
-    console.log('Teste');
+    timeCro.style.display='flex'
+    boxTime.style.display='none';
 })
