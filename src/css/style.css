@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Righteous&family=Sarala:wght@400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -5,174 +6,64 @@
 }
 
 :root{
-    --cor01: #090909;
-    --cor02: #4b5043;
-    --cor03: #D3FFE9;
-    --cor04: #9BC4BC;
-    --cor05: #8DDBE0;
+    --cor01:#242331;
+    --cor02:#533E2D;
+    --cor03:#A27035;
+    --cor04:#B88B4A;
+    --cor05:#DDCA7D;
 }
-
-.hidden{
-   opacity: 0 !important;
-}
-
-.show{
-    opacity: 1 !important;
-} 
 
 body{
-    /* background-image:linear-gradient(45deg, var(--cor01), var(--cor02)); */
-    background-color: var(--cor01);
-    height: 100vh;
     width: 100vw;
-
-    & .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-
-        & .box-container{
-            position: relative;
-            background-color: transparent;
-            border-radius: 5px;
-            box-shadow: 2px 2px 20px var(--cor05);
-            height: 300px;
-            width: 800px;
-
-            & .menu{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                list-style: none;
-
-                & li{
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 50px;
-                    width: 100%;
-                    cursor: pointer;
-                    
-                    
-                    & a{
-                        color: var(--cor05);
-                        font-size: 20px;
-                        text-decoration: none;
-                        text-transform: uppercase;
-                        text-align: center;
-                        width: 100%;
-                    }
-
-                    &:hover::after{
-                        position: absolute;
-                        content: "";
-                        width: 100%;
-                        height: 5px;
-                        bottom: 0;
-                        border-radius: 4px;
-                        box-shadow: 1px 1px 0.5px var(--cor05);
-                        animation: menu 0.2s linear;
-                    }
-
-                    
-                }
-            }
-
-
-
-            /* Estilizando as box do numeros */
-
-            & .box-time{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                height: 83%;
-
-                & .box{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    text-align: center;
-                    /* background-color: var(--cor02); */
-                    box-shadow: 1px 1px 20px 1px var(--cor05);
-                    border-radius: 50%;
-                    color: var(--cor03);
-                    width: 200px;
-                    height: 200px;
-
-                    & .text {
-                        font-size: 20px;
-                    }
-                    & .time{
-                        font-size: 60px;
-                    }
-                }
-            }
-        }
-        
-
-        /* Estilizando a parte do cronometro */
-
-        & .time-cro{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            & .stopwatch{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                color: var(--cor05);
-                width: 600px;
-                height: 200px;
-                border-radius: 10px;
-                /* box-shadow: 1px 1px 20px 1px var(--cor05); */
-
-                & .time-stop{
-                    font-size: 80px;
-                    margin: 20px 0;
-                }
-
-                & .btn {
-                    width: 90px;
-                    height: 40px;
-                    cursor: pointer;
-                    border: none;
-                    margin: 0 5px;
-                    border-radius: 5px;
-                    &:hover{
-                        background-color: var(--cor02);
-                        color: var(--cor05);
-                    }
-                }
-            }
-        }
-    }
+    height: 100vh;
+    background:linear-gradient(120deg, var(--cor02), var(--cor03), var(--cor04), var(--cor05));
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes menu {
-    0% {
-        width: 5%;
-        height: 0px;
-        left: 0;
-    }
-
-    50% {
-        width: 50%;
-        height: 0px;
-        left: 0;
-    }
-
-    100%{
-        width: 100%;
-        left: 0;
-    }
+main{
+    background-color: transparent;
+    box-shadow: 5px 5px 15px 8px rgba(0, 0, 0, 0.22);
+    width: 650px;
+    height: 250px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 
+.container-field{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
 
+main .field{
+    background-color: var(--cor01);
+    width: 150px;
+    height: 170px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.355);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.field div{
+    color:aliceblue;
+    font-weight: 400;
+    font-family: "Righteous", sans-serif;
+    font-size: 75px
+}
+
+.field span{
+    color:aliceblue;
+    font-weight: 400;
+    font-family: "Righteous", sans-serif;
+    font-size: 15px;
+}

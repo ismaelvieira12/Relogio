@@ -8,53 +8,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <section class="container">
-        <div class="box-container">
-            <nav class="menu">
-                <li>
-                    <a href="#" id="relogio">Relógio</a>
-                </li>
-                <li>
-                    <a href="#" id="cronometro">Cronômetro</a>
-                </li>
-            </nav>
-
-            <div class="box-time">
-                <div class="box">
-                    <p class="time">00</p>
-                    <p class="text horas">Horas</p>
-                </div>
-                <div class="box">
-                    <p class="time">00</p>
-                    <p class="text minutos">Minutos</p>
-                </div>
-                <div class="box">
-                    <p class="time">00</p>
-                    <p class="text segundos">Segundos</p>
-                </div>
-            </div>
-
-            <div class="time-cro">
-                <div class="stopwatch">
-                    <h1 class="time-stop">00:00:00</h1>
-    
-                    <div class="actions ">
-                        <button class="btn" id="reset">
-                            <i class="fa-solid fa-rotate-right"></i>
-                        </button>
-                        <button class="btn" id="power">
-                            <i class="fa-solid fa-play"></i>
-                            <!-- <i class="fa-solid fa-pause"></i> -->
-                        </button>
-                        <button class="btn" id="mark">
-                            <i class="fa-solid fa-bookmark"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+    <main class="container">
+        <div class="container-field">
+            <label class="field">
+                <div class=" hora">   00</div>
+                <span>Horas</span> 
+            </label>
+            <label class="field">
+                <div class=" minuto"> 00</div>
+                <span>Minutos</span>
+            </label>
+            <label class="field">
+                <div class=" segundo">00</div>
+                <span>Segundos</span>
+            </label>
         </div>
-    </section>
-
+    </main>
     <script src="src/js/script.js"></script>
 </body>
 </html>
