@@ -32,7 +32,7 @@ const relogio = setInterval( () =>{
         m = `0 ${m}`
     }
     else if(s < 10){
-        s = `0${s}`
+        s = `0 ${s}`
     }
 
     hora.textContent = h;
