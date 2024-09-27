@@ -98,8 +98,11 @@ body{
         }
 
         & .container-cro{
-            background-color: #fff;
-            width: 100%;
+            background-color: var(--cor01);
+            color: aliceblue;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            width: 80%;
             height: 75%;
             display: flex;
             justify-content: center;
