@@ -69,7 +69,7 @@ body{
 
 
         & .options{
-            margin-top: -20px;
+            margin-top: -10px;
             width: 100%;
             height: 50px;
             display: flex;
@@ -107,7 +107,12 @@ body{
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 40px;
+            border: 4px solid #ffffffba;
+            
+            & p{
+                font-size: 6rem;
+                /* font-family: "Righteous", sans-serif; */
+            }
         }
     }
 }
