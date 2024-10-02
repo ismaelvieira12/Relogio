@@ -120,4 +120,5 @@ body{
 
 .hidden{
     display: none !important;
+    transition: 2s;
 }
