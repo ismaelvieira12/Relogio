@@ -2,17 +2,15 @@
 const hora = document.querySelector('.hora');
 const minuto = document.querySelector('.minuto');
 const segundo = document.querySelector('.segundo');
-const relElement = document.querySelector('.relogio');
-const cornometro = document.querySelector('.cornometro');
+const relElement = document.querySelector('#relogio');
+const cronometro = document.querySelector('#cornometro');
 
-function swapTurn(){
-} 
-
-relElement.addEventListener('click', () => {
+const swapTurn = () => {
     console.log('Testge');
+}
 
-});
-
+relElement.addEventListener('click', swapTurn);
+cronometro.addEventListener('click', swapTurn);
 
 
 const relogio = setInterval(() =>{
