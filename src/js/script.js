@@ -1,24 +1,17 @@
-// const relogio = document.querySelector('#relogio');
-// const cronometro = document.querySelector("#cronometro");
-// const boxTime = document.querySelector('.box-time');
-// const timeCro = document.querySelector('.time-cro');
-
-
-// relogio.addEventListener('click', () => {
-//    boxTime.classList.add('show');
-//    timeCro.style.display="none";
-// });
-
-// cronometro.addEventListener('click', () => {
-//     timeCro.style.display='flex'
-//     boxTime.style.display='none';
-// })
 
 const hora = document.querySelector('.hora');
 const minuto = document.querySelector('.minuto');
 const segundo = document.querySelector('.segundo');
 const relElement = document.querySelector('.relogio');
-const
+const cornometro = document.querySelector('.cornometro');
+
+function swapTurn(){
+} 
+
+relElement.addEventListener('click', () => {
+    console.log('Testge');
+
+});
 
 
 
