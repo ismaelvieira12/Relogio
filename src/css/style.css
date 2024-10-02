@@ -98,6 +98,7 @@ body{
         }
 
         & .container-cro{
+            position: relative;
             background-color: var(--cor01);
             color: aliceblue;
             border-radius: 15px;
@@ -109,7 +110,18 @@ body{
             justify-content: center;
             align-items: center;
             border: 4px solid #ffffffba;
-            
+
+            &::after{
+                content: "";
+                width: 100px;
+                height: 200%;
+                background-color: #242331;
+                position: absolute;
+
+                left: 50;
+
+            }
+
             & p{
                 font-size: 6rem;
                 /* font-family: "Righteous", sans-serif; */
