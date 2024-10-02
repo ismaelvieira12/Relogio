@@ -8,12 +8,12 @@ const containerCro = document.querySelector('#container-cro');
 const containerField = document.querySelector('#container-field');
 
 const swapTurn = () => {
-    console.log('Testge');
+    console.log('Teste');
     containerField.classList.remove('hidden');
     containerCro.classList.add('hidden');
 }
 const swapTurnInve = () => {
-    console.log('Testge');
+    console.log('Teste');
     containerCro.classList.remove('hidden');
     containerField.classList.add('hidden');
 }
