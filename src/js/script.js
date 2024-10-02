@@ -17,6 +17,9 @@
 const hora = document.querySelector('.hora');
 const minuto = document.querySelector('.minuto');
 const segundo = document.querySelector('.segundo');
+const relElement = document.querySelector('.relogio');
+const
+
 
 
 const relogio = setInterval(() =>{
