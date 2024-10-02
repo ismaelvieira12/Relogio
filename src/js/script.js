@@ -4,13 +4,21 @@ const minuto = document.querySelector('.minuto');
 const segundo = document.querySelector('.segundo');
 const relElement = document.querySelector('#relogio');
 const cronometro = document.querySelector('#cornometro');
+const containerCro = document.querySelector('#container-cro');
+const containerField = document.querySelector('#container-field');
 
 const swapTurn = () => {
     console.log('Testge');
+    containerField.classList.remove('hidden');
+    containerCro.classList.add('hidden');
 }
-
+const swapTurnInve = () => {
+    console.log('Testge');
+    containerCro.classList.remove('hidden');
+    containerField.classList.add('hidden');
+}
 relElement.addEventListener('click', swapTurn);
-cronometro.addEventListener('click', swapTurn);
+cronometro.addEventListener('click', swapTurnInve);
 
 
 const relogio = setInterval(() =>{
