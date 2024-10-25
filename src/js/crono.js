@@ -40,13 +40,15 @@ const pausarCronometro = () => {
 
 
 // para voltar e restartar o cronometro basta chamar as duas function 
-// pausarCronometro e iniciar o cronometro e voltar o tempo para 0
+// pausarCronometro e atualizarDisplay e voltar o tempo para 0
 const restartar = () =>{
     pausarCronometro();
     tempo = 0;
-    iniciarCronometro();
+    atualizarDisplay();
 }
 
+document.getElementById('refresh').addEventListener('click', restartar);
+document.getElementById('play').addEventListener('click', iniciarCronometro);
+document.getElementById('pause').addEventListener('click', pausarCronometro);
 
-// iniciarCronometro();
-// atualizarDisplay();
+atualizarDisplay();
