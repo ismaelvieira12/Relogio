@@ -113,15 +113,13 @@ body{
             color: aliceblue;
             border-radius: 15px;
             margin-bottom: 10px;
-            width: 80%;
+            width: 85%;
             height: 75%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             border: 4px solid #ffffffba;
-
-        
 
             & p{
                 font-size: 6rem;
