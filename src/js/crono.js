@@ -52,3 +52,5 @@ document.getElementById('play').addEventListener('click', iniciarCronometro);
 document.getElementById('pause').addEventListener('click', pausarCronometro);
 
 atualizarDisplay();
+
+
