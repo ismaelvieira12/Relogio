@@ -23,6 +23,10 @@ body{
     
     & .container{
         position: relative;
+        background-image:url(../stit.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 100%;
         background-color: transparent;
         box-shadow: 5px 5px 15px 8px rgba(0, 0, 0, 0.22);
         width: 650px;
@@ -106,6 +110,14 @@ body{
                     left: 0;
                     bottom: 0;
                 }
+            }
+
+            & .img{
+                position: absolute;
+                top: 0px;
+                left: 10px;
+                margin: 0;
+                height: 40px;
             }
         }
 
