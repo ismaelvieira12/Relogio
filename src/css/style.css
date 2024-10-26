@@ -34,6 +34,8 @@ body{
         align-items: center;
         
         & .container-field {
+            position: absolute;
+            top: 28%;
             display: flex;
             justify-content: space-around;
             gap: 50px;
@@ -67,20 +69,21 @@ body{
                 }
             }
         }
-/* 
+
         &::after{
             content: "";
-            width: 100px;
+            width: 550px;
             height: 100%;
             background-color: #242331;
             position: absolute;
 
-            left: 50;
+            left: 50%;
 
-        } */
+        }
 
         & .options{
-            margin-top: -10px;
+            position: absolute;
+            top: 0;
             width: 100%;
             height: 50px;
             display: flex;
@@ -108,13 +111,15 @@ body{
             }
         }
 
-        & .container-cro{
+        & .container-cro {
+            position: absolute;
             background-color: var(--cor01);
             color: aliceblue;
-            border-radius: 15px;
+            border-radius: 10px;
             margin-bottom: 10px;
+            top: 28%;
             width: 85%;
-            height: 75%;
+            height: 67%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -152,4 +157,19 @@ body{
 .hidden{
     display: none !important;
     transition: 2s;
+}
+
+@keyframes toRigth {
+    0%{
+        width: 350px;
+        left: 0;
+    }
+    50%{
+        width: 500px;
+        left: 50%;
+    }
+    100%{
+        width: 650px;
+        
+    }
 }
