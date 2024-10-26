@@ -15,11 +15,12 @@
 
 body{
     width: 100vw;
-    height: 100vh;
+    height: 200%;
     background:linear-gradient(120deg, var(--cor02), var(--cor03), var(--cor04), var(--cor05));
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     
     & .container{
         position: relative;
@@ -160,6 +161,12 @@ body{
                 }
             }
         }
+    }
+
+    & .placy-Mark{
+        background-color: #242331;
+        margin: 20px 0;
+        padding: 20px;
     }
 }
 
