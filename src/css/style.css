@@ -50,6 +50,7 @@ body{
                 width: 150px;
                 height: 200px;
                 border-radius: 8px;
+                border: 2px solid #ffffff;
                 display: flex;
                 align-items: center;
                 justify-content: center;
