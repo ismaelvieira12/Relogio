@@ -21,10 +21,28 @@ const atualizarDisplay = (tempoCorrido) =>{
 // a variavel RODANDO será alterada para verdadeira e será atribuida uma fucttion para a 
 // a variavel intervalo que acrescentará valor ao tempo e por sua vez chama a function atualizar display
 const iniciarCronometro = () => {
-  const buttom = document.querySelector("#play");
+//   const buttom = document.querySelector("#play");
   const actions = document.getAttribute("action");
-
+  const buttom = document.getElementById("play");
   clearInterval(intervalo);
+
+  if(actions == "start" || actions == "continue"){
+        intervalo = setInterval(()=>{
+            tempo++;
+            setTimer(tempo);
+        }, 10);
+
+        buttom.setAttribute('action', 'pause');
+        buttom.innerHTML= '<i class="fa-solid fa-pause"></i>';
+    } else if(actions == 'pause') {
+        buttom.setAttribute('action', 'continue');
+        buttom.innerHTML= '<i class="fa-solid fa-play"></i>';
+    }
+}
+
+const setTimer = () => {
+    timerEl.innerText = atualizarDisplay(tempoCorrido);
+
 }
 
 //para esssa fuction so precisamos voltar a variavel RODANDO para o valor inicial
