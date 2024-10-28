@@ -42,7 +42,7 @@ const iniciarCronometro = () => {
 
 const setTimer = () => {
     timerEl.innerText = atualizarDisplay(tempoCorrido);
-
+    
 }
 
 //para esssa fuction so precisamos voltar a variavel RODANDO para o valor inicial
