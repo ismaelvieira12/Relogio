@@ -102,7 +102,7 @@ body{
                 font-size: 20px;
                 font-family: "Righteous", sans-serif;
                 color: #fff;
-
+                
                 &:hover::after{
                     position: absolute;
                     content: "";
@@ -111,6 +111,7 @@ body{
                     height: 1px;
                     left: 0;
                     bottom: 0;
+                    animation: boottomBTN .1s linear;
                 }
             }
 
@@ -207,5 +208,15 @@ body{
     100%{
         width: 0%;
         left: 100%;
+    }
+}
+
+
+@keyframes boottomBTN {
+    0%{
+        width: 5%
+    }
+    100%{
+        width: 100%;
     }
 }
