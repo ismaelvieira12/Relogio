@@ -137,14 +137,14 @@ body{
             justify-content: center;
             align-items: center;
             border: 4px solid #ffffffba;
-            & .time{
-                font-size: 6rem;
+            & #timer{
+                font-size: 5rem;
                 /* font-family: "Righteous", sans-serif; */
             }
 
             & .btn-icon{
                 margin: 10px 5px;
-                width: 60px;
+                width: 80px;
                 height: 30px;
                 font-size: 15px;
                 cursor: pointer;
@@ -169,6 +169,8 @@ body{
         right: 250px;
         top: 0;
         background-color: #242331;
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.355);
+        border-radius: 10px;
         margin: 20px 0;
         padding: 20px;
         width: 400px;

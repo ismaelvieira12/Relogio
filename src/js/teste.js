@@ -7,9 +7,9 @@ const minuto = document.querySelector('.m');
 const segundo = document.querySelector('.s');
 
 const atualizarDisplay = () => {
-    const h = String(Math.floor(tempo / 3600)).padStart(2, '0');
-    const m = String(Math.floor((tempo % 3600) / 60)).padStart(2, '0');
-    const s = String(tempo % 60).padStart(2, '0');
+    let h = String(Math.floor(tempo / 3600)).padStart(2, '0');
+    let m = String(Math.floor((tempo % 3600) / 60)).padStart(2, '0');
+    let s = String(tempo % 60).padStart(2, '0');
 
     hora.textContent = h;
     minuto.textContent = m;
