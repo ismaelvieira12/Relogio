@@ -1,45 +1,39 @@
-let tempo = 0; // Tempo em segundos
-let intervalo; // Para armazenar o intervalo
-let rodando = false; // Verifica se o cronômetro está rodando
+const play = document.querySelector("#play");
+const refresh = document.querySelector("#refresh");
+const save = document.querySelector("#save");
+const timer = document.querySelector("#timer");
+const placyMark = document.querySelector(".placy-Mark");
+const hEl = document.querySelector(".h");
+const mEl = document.querySelector(".m");
+const sEl = document.querySelector(".s");
+const milsEl = document.querySelector(".mls");
 
-const hora = document.querySelector('.h');
-const minuto = document.querySelector('.m');
-const segundo = document.querySelector('.s');
 
-const atualizarDisplay = () => {
-    let h = String(Math.floor(tempo / 3600)).padStart(2, '0');
-    let m = String(Math.floor((tempo % 3600) / 60)).padStart(2, '0');
-    let s = String(tempo % 60).padStart(2, '0');
+let tempo = 0;
+let intervalo;
+let rodando = false;
 
-    hora.textContent = h;
-    minuto.textContent = m;
-    segundo.textContent = s;
-};
+let hours = 0;
+let minutes = 0;
+let seconds = 0;
+let miliSeconds = 0;
 
-const iniciarCronometro = () => {
-    if (!rodando) {
-        rodando = true;
-        intervalo = setInterval(() => {
-            tempo++;
-            atualizarDisplay();
-        }, 1000);
-    }
-};
 
-const pausarCronometro = () => {
-    rodando = false;
-    clearInterval(intervalo);
-};
+//Função para iniciar o cronometro
+const startTimer = () => {
+    intervalo = setInterval(() => {
+        if(!rodando){
+            rodando = true;
+            miliSeconds += 10;
 
-const resetarCronometro = () => {
-    pausarCronometro();
-    tempo = 0;
-    atualizarDisplay();
-};
+            if(miliSeconds === 1000){
+                segundo++;
+                
+            }
+        }
+    }, 10)
+}
 
-document.getElementById('refresh').addEventListener('click', iniciarCronometro);
-document.getElementById('play').addEventListener('click', pausarCronometro);
-document.getElementById('pause').addEventListener('click', resetarCronometro);
+play.addEventListener('click', startTimer);
 
-// Inicializa o display
-atualizarDisplay();
+
