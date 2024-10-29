@@ -40,9 +40,14 @@ const iniciarCronometro = () => {
     }
 }
 
+// Fuction para pausar o cronometro
+const puseTimer = () => {
+    
+}
+
 const setTimer = () => {
     timerEl.innerText = atualizarDisplay(tempoCorrido);
-    
+
 }
 
 //para esssa fuction so precisamos voltar a variavel RODANDO para o valor inicial

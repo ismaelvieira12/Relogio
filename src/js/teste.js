@@ -29,7 +29,6 @@ const startTimer = () => {
             if(miliSeconds === 1000){
                 seconds++;
                 miliSeconds = 0;
-                
             }
 
             if(seconds === 60){
@@ -48,7 +47,9 @@ const startTimer = () => {
             sEl.textContent = formatTime(seconds);
             milsEl.textContent = formatTimeMiliSeconds(miliSeconds);
         }
-    }, 10)
+    }, 10);
+
+    play.innerHTML=innerHTML= '<i class="fa-solid fa-pause"></i>';
 }
 
 // criando uma função para formatação dos numeros do cronometro colocando o ZERo na frente
