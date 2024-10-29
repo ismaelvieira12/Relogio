@@ -23,13 +23,29 @@ let miliSeconds = 0;
 const startTimer = () => {
     intervalo = setInterval(() => {
         if(!rodando){
-            rodando = true;
+            // rodando = true;
             miliSeconds += 10;
 
             if(miliSeconds === 1000){
-                segundo++;
-                
+                seconds++;
+                miliSeconds = 0;
             }
+
+            if(seconds === 60){
+                minutes++;
+                seconds = 0;
+            }
+
+            if(minutes === 60){
+                hours++
+                minutes = 0;
+            }
+
+            // colocando os numeros para a tela
+            hEl.textContent = hours;
+            mEl.textContent = minutes;
+            sEl.textContent = seconds;
+            milsEl.textContent = miliSeconds;
         }
     }, 10)
 }
