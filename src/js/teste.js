@@ -7,7 +7,7 @@ const hEl = document.querySelector("#h");
 const mEl = document.querySelector("#m");
 const sEl = document.querySelector("#s");
 const milsEl = document.querySelector("#mls");
-
+const numbers = document.querySelector("#number");
 
 let tempo = 0;
 let intervalo;
@@ -43,17 +43,21 @@ const startTimer = () => {
             }
 
             // colocando os numeros para a tela
-            hEl.textContent = hours;
-            mEl.textContent = minutes;
-            sEl.textContent = seconds;
-            milsEl.textContent = miliSeconds;
+            hEl.textContent = formatTime(hours);
+            mEl.textContent = formatTime(minutes);
+            sEl.textContent = formatTime(seconds);
+            milsEl.textContent = formatTimeMiliSeconds(miliSeconds);
         }
     }, 10)
 }
 
-// criando uma função para formatação dos numeros do cronometro
-const formatTime = (hEl, mEl, sEl, milsEl) => {
-    return sEl < 10 ? `0${sEl}`: sEl;    
+// criando uma função para formatação dos numeros do cronometro colocando o ZERo na frente
+const formatTime = (numbers) => {
+    return numbers < 10 ? `0${numbers}`: numbers;    
+}
+
+const formatTimeMiliSeconds = (numbers) => {
+    return numbers < 100 ? `${numbers}`.padStart(3, '0') : numbers;
 }
 
 play.addEventListener('click', startTimer);
