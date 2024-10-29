@@ -3,10 +3,10 @@ const refresh = document.querySelector("#refresh");
 const save = document.querySelector("#save");
 const timer = document.querySelector("#timer");
 const placyMark = document.querySelector(".placy-Mark");
-const hEl = document.querySelector(".h");
-const mEl = document.querySelector(".m");
-const sEl = document.querySelector(".s");
-const milsEl = document.querySelector(".mls");
+const hEl = document.querySelector("#h");
+const mEl = document.querySelector("#m");
+const sEl = document.querySelector("#s");
+const milsEl = document.querySelector("#mls");
 
 
 let tempo = 0;
@@ -29,6 +29,7 @@ const startTimer = () => {
             if(miliSeconds === 1000){
                 seconds++;
                 miliSeconds = 0;
+                
             }
 
             if(seconds === 60){
@@ -48,6 +49,11 @@ const startTimer = () => {
             milsEl.textContent = miliSeconds;
         }
     }, 10)
+}
+
+// criando uma função para formatação dos numeros do cronometro
+const formatTime = (hEl, mEl, sEl, milsEl) => {
+    return sEl < 10 ? `0${sEl}`: sEl;    
 }
 
 play.addEventListener('click', startTimer);
