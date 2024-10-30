@@ -6,16 +6,19 @@ const relElement = document.querySelector('#relogio');
 const cronometro = document.querySelector('#cornometro');
 const containerCro = document.querySelector('#container-cro');
 const containerField = document.querySelector('#container-field');
+const placyMark = document.querySelector('.placy-Mark');
 
 const swapTurn = () => {
     console.log('Teste');
     containerField.classList.remove('hidden');
     containerCro.classList.add('hidden');
+    placyMark.classList.add('hidden');
 }
 const swapTurnInve = () => {
     console.log('Teste');
     containerCro.classList.remove('hidden');
     containerField.classList.add('hidden');
+    placyMark.classList.remove('hidden');
 }
 relElement.addEventListener('click', swapTurn);
 cronometro.addEventListener('click', swapTurnInve);
