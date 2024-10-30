@@ -9,6 +9,7 @@ const mEl = document.querySelector("#m");
 const sEl = document.querySelector("#s");
 const milsEl = document.querySelector("#mls");
 const numbers = document.querySelector("#number");
+const btnLimpar = document.querySelector('.btn-limpar');
 
 let tempo = 0;
 let intervalo;
@@ -101,6 +102,11 @@ const salvarRecorde = () => {
     recordList.appendChild(novoRecord);
 }
 
+const limparRecorde = () => {
+    
+}
+
 play.addEventListener('click', startTimerStopGame);
 refresh.addEventListener('click', restartarTime);
 save.addEventListener('click', salvarRecorde);
+btnLimpar.addEventListener('click', limparRecorde )
