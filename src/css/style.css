@@ -167,7 +167,7 @@ body{
 
     & .placy-Mark{
         position: absolute;
-        right: 250px;
+        right: 10%;
         top: 0;
         background-color: #242331;
         box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.355);
@@ -182,6 +182,16 @@ body{
 
         & p{
             margin: 10px 0;
+        }
+
+        & ul >li{
+            border-bottom: 1px solid #d2d2d270;
+            font-size: 20px;
+            list-style: none;
+            text-decoration: none;
+            text-align: justify;
+            /* padding: 5px; */
+            margin-bottom: 10px;
         }
     }
 }

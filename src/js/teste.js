@@ -95,8 +95,12 @@ const restartarTime = () => {
 }
 
 const salvarRecorde = () => {
-    
+    const recordList = document.querySelector('#record-list');
+    const novoRecord =  document.createElement('li');
+    novoRecord.innerText = formatTime(numbers);
+    recordList.appendChild(novoRecord);
 }
 
 play.addEventListener('click', startTimerStopGame);
 refresh.addEventListener('click', restartarTime);
+save.addEventListener('click', salvarRecorde);
