@@ -92,7 +92,10 @@ const restartarTime = () => {
     seconds = 0;
     miliSeconds = 0;
     updateDisplay();
+}
 
+const salvarRecorde = () => {
+    
 }
 
 play.addEventListener('click', startTimerStopGame);
