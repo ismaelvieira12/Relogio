@@ -180,12 +180,31 @@ body{
         font-size: 20px;
         font-family: Arial, Helvetica, sans-serif;
 
+        & .box-mark{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & .btn-limpar{
+                padding: 10px;
+                background-color:var(--cor04);
+                font-weight: bold;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                color: #fff;
+                transition:  background-color 0.1s;
+                &:hover{
+                    background-color: #533E2D;
+                }
+            }
+        }
+
         & p{
             margin: 10px 0;
         }
 
         & ul >li{
-            border-bottom: 1px solid #d2d2d270;
+            border-bottom: 1px solid #d2d2d227;
             font-size: 20px;
             list-style: none;
             text-decoration: none;
