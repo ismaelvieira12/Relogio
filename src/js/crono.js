@@ -41,10 +41,10 @@ const iniciarCronometro = () => {
 }
 
 
-const setTimer = () => {
-    timerEl.innerText = atualizarDisplay(tempoCorrido);
+//const setTimer = () => {
+   // timerEl.innerText = atualizarDisplay(tempoCorrido);
 
-}
+//}
 
 //para esssa fuction so precisamos voltar a variavel RODANDO para o valor inicial
 // e depois para a fuction que foi a tribuida para a varial INTERVALO
