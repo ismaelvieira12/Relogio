@@ -9,7 +9,7 @@ const mEl = document.querySelector("#m");
 const sEl = document.querySelector("#s");
 const milsEl = document.querySelector("#mls");
 const numbers = document.querySelector("#number");
-const btnLimpar = document.querySelector('.btn-limpar');
+const btnLimpar = document.querySelector('#limpar-crono');
 
 let tempo = 0;
 let intervalo;
@@ -105,11 +105,12 @@ const salvarRecorde = () => {
 // função para remover oque foi acumulado.
 const limparRecorde = () => {
     let resul = prompt("Tem certeza que deseja excluir tudo?");
-    // if(resul){
-
-    // }
-    const recordList = document.querySelector('#record-list');
-    recordList.innerHTML= ''; // removendo tudo que foi acumulado no recorde.
+    if(resul = 'sim'){
+        const recordList = document.querySelector('#record-list');
+        recordList.innerHTML= ''; // removendo tudo que foi acumulado no recorde.
+    }else if(resul = "não"){
+        salvarRecorde();
+    }
 }
 
 play.addEventListener('click', startTimerStopGame);
