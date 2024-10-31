@@ -62,7 +62,7 @@ const startTimerStopGame = () => {
             hEl.textContent = formatTime(hours);
             mEl.textContent = formatTime(minutes);
             sEl.textContent = formatTime(seconds);
-            milsEl.textContent = formatTimeMiliSeconds(miliSeconds);
+            // milsEl.textContent = formatTimeMiliSeconds(miliSeconds);
             rodando = true;
             updateDisplay();
         
@@ -102,11 +102,13 @@ const salvarRecorde = () => {
     recordList.appendChild(novoRecord);
 }
 
-// const limparRecorde = () => {
-
-// }
+// função para remover oque foi acumulado.
+const limparRecorde = () => {
+    const recordList = document.querySelector('#record-list');
+    recordList.innerHTML= ''; // removendo tudo que foi acumulado no recorde.
+}
 
 play.addEventListener('click', startTimerStopGame);
 refresh.addEventListener('click', restartarTime);
 save.addEventListener('click', salvarRecorde);
-// btnLimpar.addEventListener('click', limparRecorde )
+btnLimpar.addEventListener('click', limparRecorde);
