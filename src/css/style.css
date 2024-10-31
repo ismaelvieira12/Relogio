@@ -165,7 +165,7 @@ body{
         }
     }
 
-    & .placy-Mark{
+    & .placy-Mark, & .placy-Mark-relogio{
         position: absolute;
         right: 10%;
         top: 0;
@@ -180,7 +180,7 @@ body{
         font-size: 20px;
         font-family: Arial, Helvetica, sans-serif;
 
-        & .box-mark{
+        & .box-mark, & .box-mark-relogio{
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -217,6 +217,10 @@ body{
                 margin-bottom: 10px;
             }
         } 
+    }
+
+    & .placy-Mark-relogio{
+        left: 10% !important;
     }
 }
 

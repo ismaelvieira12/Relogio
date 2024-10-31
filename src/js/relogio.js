@@ -7,18 +7,21 @@ const cronometro = document.querySelector('#cornometro');
 const containerCro = document.querySelector('#container-cro');
 const containerField = document.querySelector('#container-field');
 const placyMarks = document.querySelector('.placy-Mark');
+const placyMarkRelogio = document.querySelector('.placy-Mark-relogio');
 
 const swapTurn = () => {
     console.log('Teste');
     containerField.classList.remove('hidden');
     containerCro.classList.add('hidden');
     placyMark.classList.add('hidden');
+    placyMarkRelogio.classList.remove('hidden');
 }
 const swapTurnInve = () => {
     console.log('Teste');
     containerCro.classList.remove('hidden');
     containerField.classList.add('hidden');
     placyMarks.classList.remove('hidden');
+    placyMarkRelogio.classList.add('hidden');  
 }
 relElement.addEventListener('click', swapTurn);
 cronometro.addEventListener('click', swapTurnInve);
