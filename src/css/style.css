@@ -203,15 +203,20 @@ body{
             margin: 10px 0;
         }
 
-        & ul >li{
-            border-bottom: 1px solid #d2d2d227;
-            font-size: 20px;
-            list-style: none;
-            text-decoration: none;
-            text-align: justify;
-            /* padding: 5px; */
-            margin-bottom: 10px;
-        }
+        & ul{
+            & :first-child{
+                margin-top: 15px;
+            }
+            & li{
+                border-bottom: 1px solid #d2d2d227;
+                font-size: 20px;
+                list-style: none;
+                text-decoration: none;
+                text-align: justify;
+                /* padding: 5px; */
+                margin-bottom: 10px;
+            }
+        } 
     }
 }
 
