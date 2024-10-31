@@ -104,6 +104,10 @@ const salvarRecorde = () => {
 
 // função para remover oque foi acumulado.
 const limparRecorde = () => {
+    let resul = prompt("Tem certeza que deseja excluir tudo?");
+    // if(resul){
+
+    // }
     const recordList = document.querySelector('#record-list');
     recordList.innerHTML= ''; // removendo tudo que foi acumulado no recorde.
 }
