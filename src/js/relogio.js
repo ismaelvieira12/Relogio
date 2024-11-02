@@ -47,6 +47,6 @@ const relogio = setInterval(() =>{
     segundo.textContent = s; 
 });
 
-const addAlarme = () => {
+//const addAlarme = () => {
     
-}
+//}
