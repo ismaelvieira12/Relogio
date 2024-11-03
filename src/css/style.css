@@ -199,10 +199,6 @@ body{
             }
         }
 
-        & p{
-            margin: 10px 0;
-        }
-
         & ul{
             & :first-child{
                 margin-top: 15px;
@@ -212,10 +208,8 @@ body{
                 font-size: 20px;
                 list-style: none;
                 text-decoration: none;
-                text-align: justify;
-                /* padding: 5px; */
-                margin-bottom: 20px;
-                
+                /* text-align: justify; */
+                /* padding: 0 10px; */
             }
         } 
     }
