@@ -112,7 +112,8 @@ const salvarRecorde = () => {
     recordList.style.flexDirection='column';
     recordList.style.justifyContent='space-between';
     recordList.style.alignItems='center';
-    novoRecord.style.gap='30px';
+    // novoRecord.style.display='flex';
+    // novoRecord.style.gap='10px';
     novoRecord.style.width='100%';
     // trashRecord.style.display='flex';
     // trashRecord.style.justifyContent='center';
