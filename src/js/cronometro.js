@@ -98,18 +98,20 @@ const restartarTime = () => {
 const salvarRecorde = () => {
     const recordList = document.querySelector('#record-list');
     const novoRecord =  document.createElement('li');
-    novoRecord.innerText = formatTime(numbers + numbers);
+    
+    // Formatando o tempo para que seja salvo na lista de recordes
+
+    const tempoFormatado = `${formatTime(hours)}: ${formatTime(minutes)}: ${formatTime(seconds)}: ${formatTime(miliSeconds)}`
+    novoRecord.innerText = tempoFormatado;
     recordList.appendChild(novoRecord);
 }
 
 // função para remover oque foi acumulado.
 const limparRecorde = () => {
-    let resul = prompt("Tem certeza que deseja excluir tudo?");
+    let resul = alert("Tem certeza que deseja excluir tudo?");
     if(resul = 'sim'){
         const recordList = document.querySelector('#record-list');
         recordList.innerHTML= ''; // removendo tudo que foi acumulado no recorde.
-    }if(resul = "não"){
-        salvarRecorde();
     }
 }
 
