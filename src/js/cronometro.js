@@ -112,7 +112,7 @@ const salvarRecorde = () => {
 
     // Formatando o tempo para que seja salvo na lista de recordes
 
-    const tempoFormatado = `${formatTime(hours)}: ${formatTime(minutes)}: ${formatTime(seconds)}: ${formatTime(miliSeconds)}`
+    const tempoFormatado = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}:${formatTime(miliSeconds)}`
     resultadoRecord.innerText = tempoFormatado;
     // trashRecordField(resultadoRecord);
 
