@@ -108,7 +108,7 @@ const limparRecorde = () => {
     if(resul = 'sim'){
         const recordList = document.querySelector('#record-list');
         recordList.innerHTML= ''; // removendo tudo que foi acumulado no recorde.
-    }else if(resul = "não"){
+    }if(resul = "não"){
         salvarRecorde();
     }
 }
