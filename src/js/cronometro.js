@@ -98,12 +98,24 @@ const restartarTime = () => {
 const salvarRecorde = () => {
     const recordList = document.querySelector('#record-list');
     const novoRecord =  document.createElement('li');
+    const trashRecord = document.createElement('button');
+
     
     // Formatando o tempo para que seja salvo na lista de recordes
 
     const tempoFormatado = `${formatTime(hours)}: ${formatTime(minutes)}: ${formatTime(seconds)}: ${formatTime(miliSeconds)}`
     novoRecord.innerText = tempoFormatado;
+    
+    
+    //estilizando o novoRecord CSS
+    novoRecord.style.display='flex';
+    novoRecord.style.justifyContent='space-around';
+    novoRecord.style.alignItems='center';
+    
+    
+    trashRecord.innerHTML='<i class="fa-solid fa-trash"></i>';
     recordList.appendChild(novoRecord);
+    novoRecord.appendChild(trashRecord);
 }
 
 // função para remover oque foi acumulado.
