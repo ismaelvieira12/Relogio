@@ -188,10 +188,12 @@ body{
         }
 
         & ul{
+
             & :first-child{
                 margin-top: 15px;
             }
             & li{
+                width: 100%;
                 border-bottom: 1px solid #d2d2d227;
                 font-size: 20px;
                 list-style: none;

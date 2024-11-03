@@ -98,35 +98,26 @@ const restartarTime = () => {
 const salvarRecorde = () => {
     const recordList = document.querySelector('#record-list');
     const novoRecord =  document.createElement('li');
+    const resultadoRecord = document.createElement('p');
     const trashRecord = document.createElement('a');
 
+    //estilizando o novoRecord CSS
+    novoRecord.style.display='flex';
+    novoRecord.style.justifyContent='space-between';
+    novoRecord.style.alignItems='center';
+    trashRecord.style.fontSize='20px';
+    trashRecord.style.color='#B88B4A';
+    trashRecord.style.marginBottom='10px';
     
+
     // Formatando o tempo para que seja salvo na lista de recordes
 
     const tempoFormatado = `${formatTime(hours)}: ${formatTime(minutes)}: ${formatTime(seconds)}: ${formatTime(miliSeconds)}`
-    novoRecord.innerText = tempoFormatado;
-    
-    
-    //estilizando o novoRecord CSS
-    recordList.style.display='flex';
-    recordList.style.flexDirection='column';
-    recordList.style.justifyContent='space-between';
-    recordList.style.alignItems='center';
-    // novoRecord.style.display='flex';
-    // novoRecord.style.gap='10px';
-    novoRecord.style.width='100%';
-    // trashRecord.style.display='flex';
-    // trashRecord.style.justifyContent='center';
-    // trashRecord.style.alignItems='center';
-    // trashRecord.style.justifyItems='center';
-    // trashRecord.style.height='100%';
-    trashRecord.style.fontSize='20px';
-    trashRecord.style.color='#B88B4A';
-    // trashRecord.style.marginBottom='10px';
+    resultadoRecord.innerText = tempoFormatado;
 
-    
     trashRecord.innerHTML='<i class="fa-solid fa-trash"></i>';
     recordList.appendChild(novoRecord);
+    novoRecord.appendChild(resultadoRecord);
     novoRecord.appendChild(trashRecord);
 }
 
