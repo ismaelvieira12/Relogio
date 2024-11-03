@@ -108,23 +108,29 @@ const salvarRecorde = () => {
     trashRecord.style.fontSize='20px';
     trashRecord.style.color='#B88B4A';
     trashRecord.style.marginBottom='10px';
-    
+    trashRecord.style.cursor='pointer';
 
     // Formatando o tempo para que seja salvo na lista de recordes
 
     const tempoFormatado = `${formatTime(hours)}: ${formatTime(minutes)}: ${formatTime(seconds)}: ${formatTime(miliSeconds)}`
     resultadoRecord.innerText = tempoFormatado;
+    // trashRecordField(resultadoRecord);
 
     trashRecord.innerHTML='<i class="fa-solid fa-trash"></i>';
     recordList.appendChild(novoRecord);
     novoRecord.appendChild(resultadoRecord);
     novoRecord.appendChild(trashRecord);
+
+    //Função que irá excluir um por um os recordes salvos
+    trashRecord.addEventListener('click', () => {
+        novoRecord.style.display='none';
+    });
 }
 
 // função para remover oque foi acumulado.
 const limparRecorde = () => {
-    let resul = alert("Tem certeza que deseja excluir tudo?");
-    if(resul = 'sim'){
+    let resul = confirm("Tem certeza que deseja excluir tudo?");
+    if(resul == true){
         const recordList = document.querySelector('#record-list');
         recordList.innerHTML= ''; // removendo tudo que foi acumulado no recorde.
     }
