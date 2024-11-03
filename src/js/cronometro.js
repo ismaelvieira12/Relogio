@@ -109,9 +109,16 @@ const salvarRecorde = () => {
     
     //estilizando o novoRecord CSS
     novoRecord.style.display='flex';
-    novoRecord.style.justifyContent='space-around';
+    novoRecord.style.justifyContent='space-between';
     novoRecord.style.alignItems='center';
-    
+    trashRecord.style.display='flex';
+    trashRecord.style.justifyContent='center';
+    trashRecord.style.alignItems='center';
+    trashRecord.style.justifyItems='center';
+    trashRecord.style.height='100%';
+    trashRecord.style.fontSize='20px';
+    trashRecord.style.color='#B88B4A'
+
     
     trashRecord.innerHTML='<i class="fa-solid fa-trash"></i>';
     recordList.appendChild(novoRecord);
