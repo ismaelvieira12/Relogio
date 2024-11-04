@@ -24,7 +24,7 @@ body{
     
     & .container{
         position: relative;
-        background-image:url(../stit.png);
+        background-image:url(../img/stit.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 100%;
