@@ -55,13 +55,21 @@ const addAlarme = () => {
     btnAlarme.innerText='Salvar';
     alarmaList.style.display='flex';
     alarmaList.classList.remove('hidden');
-    for (let i = 12; i > 0; i--) {
-        if(i < 10){
-            i = `0${i}`;
+
+    //Para colocar as horas na primeira select
+    for (let h = 12; h > 0; h--) {
+        if(h < 10){
+            h = `0${h}`;
         }
-        let option = `<option value="${i}">${i}</option>`;
+        let option = `<option value="${h}">${h}</option>`;
         select[0].firstElementChild.insertAdjacentHTML("afterend", option);
-        
+    }
+
+    //Para colocar os minutos no segundo select
+    for (let m = 59; m > 0; m--) {
+        console.log(m);
+        let option1 = `<option value="${m}">${m}</option>`;
+        select[1].firstElementChild.insertAdjacentHTML("afterend", option1);
     }
 }
 
