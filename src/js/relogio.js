@@ -51,6 +51,7 @@ const relogio = setInterval(() =>{
 
 
 const addAlarme = () => {
+    btnAlarme.innerText='Salvar';
     alarmaList.style.display='flex';
     alarmaList.classList.remove('hidden');
 }
