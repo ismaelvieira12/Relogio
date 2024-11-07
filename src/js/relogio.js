@@ -8,6 +8,7 @@ const containerCro = document.querySelector('#container-cro');
 const containerField = document.querySelector('#container-field');
 const placyMarks = document.querySelector('.placy-Mark');
 const placyMarkRelogio = document.querySelector('.placy-Mark-relogio');
+const btnAlarme = document.querySelector("#addAlarme");
 
 const swapTurn = () => {
     console.log('Teste');
@@ -47,6 +48,9 @@ const relogio = setInterval(() =>{
     segundo.textContent = s; 
 });
 
+
 const addAlarme = () => {
-    
+    alert('testando');
 }
+
+btnAlarme.addEventListener('click', addAlarme);
