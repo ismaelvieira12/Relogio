@@ -60,6 +60,7 @@ const addAlarme = () => {
             i = `0${i}`;
         }
         let option = `<option value="${i}">${i}</option>`;
+        select[0].firstElementChild.insertAdjacentHTML("afterend", option);
         
     }
 }
