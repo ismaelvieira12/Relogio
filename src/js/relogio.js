@@ -9,6 +9,7 @@ const containerField = document.querySelector('#container-field');
 const placyMarks = document.querySelector('.placy-Mark');
 const placyMarkRelogio = document.querySelector('.placy-Mark-relogio');
 const btnAlarme = document.querySelector("#addAlarme");
+const alarmaList = document.querySelector("#list-alarme");
 
 const swapTurn = () => {
     console.log('Teste');
@@ -50,7 +51,9 @@ const relogio = setInterval(() =>{
 
 
 const addAlarme = () => {
-    alert('testando');
+    const option = document.createElement('option');
+    // option.innerHTML='horas'
+    alarmaList.appendChild(option);
 }
 
 btnAlarme.addEventListener('click', addAlarme);
