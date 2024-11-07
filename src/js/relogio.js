@@ -67,6 +67,9 @@ const addAlarme = () => {
 
     //Para colocar os minutos no segundo select
     for (let m = 59; m > 0; m--) {
+        if(m < 10){
+            m = `0${m}`;
+        }
         console.log(m);
         let option1 = `<option value="${m}">${m}</option>`;
         select[1].firstElementChild.insertAdjacentHTML("afterend", option1);
