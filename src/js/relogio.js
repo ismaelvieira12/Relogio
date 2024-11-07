@@ -10,6 +10,7 @@ const placyMarks = document.querySelector('.placy-Mark');
 const placyMarkRelogio = document.querySelector('.placy-Mark-relogio');
 const btnAlarme = document.querySelector("#addAlarme");
 const alarmaList = document.querySelector(".list-alarme");
+const select = document.querySelectorAll('select');
 
 const swapTurn = () => {
     console.log('Teste');
@@ -54,6 +55,13 @@ const addAlarme = () => {
     btnAlarme.innerText='Salvar';
     alarmaList.style.display='flex';
     alarmaList.classList.remove('hidden');
+    for (let i = 12; i > 0; i--) {
+        if(i < 10){
+            i = `0${i}`;
+        }
+        let option = `<option value="${i}">${i}</option>`;
+        
+    }
 }
 
 btnAlarme.addEventListener('click', addAlarme);
