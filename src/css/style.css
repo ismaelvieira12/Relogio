@@ -172,7 +172,7 @@ body{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            & .btn-limpar{
+            & .btn-limpar, & .set-Alarme{
                 padding: 10px;
                 background-color:var(--cor04);
                 font-weight: bold;
