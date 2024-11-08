@@ -52,10 +52,12 @@ const relogio = setInterval(() =>{
 
 
 const addAlarme = () => {
-    btnAlarme.innerText='Salvar';
+    btnAlarme.style.display = 'none';
     alarmaList.style.display='flex';
     alarmaList.classList.remove('hidden');
-
+    const btnAddAlarme = document.createElement('button');
+    btnAddAlarme.innerHTML = '<button>Add Alarme</button>';
+    placyMarkRelogio.appendChild(btnAddAlarme);
     //Para colocar as horas na primeira select
     for (let h = 12; h > 0; h--) {
         if(h < 10){
