@@ -60,21 +60,15 @@ const addAlarme = () => {
     btnAddAlarme.classList.add('set-Alarme');
     placyMarkRelogio.appendChild(btnAddAlarme);
     let ampm = '';
-
+    
     //Mudar o horário de AM para PM
     for (let i = 2; i > 0; i--) {
-        ampm = i;
-        if(ampm === 1){
-            ampm = 'AM';
-        }else {
-            ampm ='PM';
-        }
+        ampm = i == 1 ? 'AM' : 'PM';
         let option2 = `<option value="${ampm}">${ampm}</option>`;
         select[2].firstElementChild.insertAdjacentHTML("afterend", option2);
     }
-
     console.log(ampm);
-    if (ampm = 'PM') {
+    if (ampm == 'AM') {
         //Para colocar as horas na primeira select
         for (let h = 12; h > 0; h--) {
             if(h < 10){
@@ -84,7 +78,6 @@ const addAlarme = () => {
             select[0].firstElementChild.insertAdjacentHTML("afterend", option);
         }
 
-    }else{
         //Para colocar os minutos no segundo select
         for (let m = 59; m > 0; m--) {
             if(m < 10){
@@ -94,7 +87,9 @@ const addAlarme = () => {
             let option1 = `<option value="${m}">${m}</option>`;
             select[1].firstElementChild.insertAdjacentHTML("afterend", option1);
         }
+    }if(ampm == 2){
     } 
+
     
 }
 
