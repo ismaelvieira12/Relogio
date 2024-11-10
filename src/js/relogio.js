@@ -59,7 +59,10 @@ const addAlarme = () => {
     btnAddAlarme.innerHTML = 'Add Alarme';
     btnAddAlarme.classList.add('set-Alarme');
     placyMarkRelogio.appendChild(btnAddAlarme);
+
     //Para colocar as horas na primeira select
+
+    
     for (let h = 12; h > 0; h--) {
         if(h < 10){
             h = `0${h}`;
@@ -67,7 +70,6 @@ const addAlarme = () => {
         let option = `<option value="${h}">${h}</option>`;
         select[0].firstElementChild.insertAdjacentHTML("afterend", option);
     }
-
     //Para colocar os minutos no segundo select
     for (let m = 59; m > 0; m--) {
         if(m < 10){
@@ -76,6 +78,15 @@ const addAlarme = () => {
         console.log(m);
         let option1 = `<option value="${m}">${m}</option>`;
         select[1].firstElementChild.insertAdjacentHTML("afterend", option1);
+    }
+
+    for (let i = 2; i > 0; i--) {
+        if(i == 1){
+           
+        }
+        console.log(m);
+        let option2 = `<option value="${i}">${i}</option>`;
+        select[2].firstElementChild.insertAdjacentHTML("afterend", option2);
     }
 }
 
