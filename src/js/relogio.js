@@ -68,7 +68,11 @@ const addAlarme = () => {
     //Mudar o horário de AM para PM
     for (let i = 2; i > 0; i--) {
         ampm = i;
-        if(ampm )
+        if(ampm == 1){
+            ampm = 'AM';
+        }else {
+            ampm ='PM';
+        }
         let option2 = `<option value="${ampm}">${ampm}</option>`;
         select[2].firstElementChild.insertAdjacentHTML("afterend", option2);
     }
