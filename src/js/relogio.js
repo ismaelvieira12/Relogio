@@ -61,7 +61,7 @@ const addAlarme = () => {
     placyMarkRelogio.appendChild(btnAddAlarme);
     const am = document.querySelector('.AM');
     const pm = document.querySelector('.PM');
-    let ampm = '';
+    //let ampm = '';
     
     //Mudar o horário de AM para PM
     am.addEventListener('click', () => {
