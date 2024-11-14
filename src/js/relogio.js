@@ -64,7 +64,7 @@ const addAlarme = () => {
     //let ampm = '';
     
     //Mudar o horário de AM para PM
-   /* am.addEventListener('click', () => {
+   am.addEventListener('click', () => {
         //Para colocar as horas na primeira select
         for (let h = 12; h > 0; h--) {
             if(h < 10){
