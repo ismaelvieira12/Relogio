@@ -86,7 +86,6 @@ const addAlarme = () => {
 
     });
     
-    pm.addEventListener('click', alert('Testado'));
 }
 
 btnAlarme.addEventListener('click', addAlarme);
