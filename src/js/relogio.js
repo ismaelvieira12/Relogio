@@ -82,7 +82,7 @@ const addAlarme = () => {
             console.log(m);
             let option1 = `<option value="${m}">${m}</option>`;
             select[1].firstElementChild.insertAdjacentHTML("afterend", option1);
-        }*/
+        }
 
     });
     
