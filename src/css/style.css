@@ -201,7 +201,7 @@ body{
     }
 
     & .placy-Mark-relogio{
-        left: 10% !important;
+        left: 1% !important;
         & .list-alarme{
             width: 100%;
             display: flex;
