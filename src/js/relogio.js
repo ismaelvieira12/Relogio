@@ -61,26 +61,9 @@ const addAlarme = () => {
     placyMarkRelogio.appendChild(btnAddAlarme);
     const am = document.querySelector('.AM');
     const pm = document.querySelector('.PM');
-    const currentTime = document.querySelector('h1');
+    const currentTime = document.querySelector('#currentTime');
     const selectMenu =  document.querySelectorAll('select');
-    setInterval(() => {
-        let Dte = new Date(),
-        horas =  Date.getHours(),
-        minutos = Date.getMinutes(),
-        segundos = getSeconds(),
-        amp = 'PM'
-
-        if(horas >= 12){
-            horas = horas -12;
-            amp = 'PM';
-        }
-        horas = horas == 0? horas = 12: horas;
-        horas = horas < 10? '0' + horas: horas;
-        minutos = minutos < 10? '0' + minutos: minutos;
-        segundos = segundos < 10? '0' + segundos: segundos;
-
-        currentTime.innerHTML = `${horas}:${minutos}:${segundos}`
-    })
+   
     //let ampm = '';
     
     //Mudar o horário de AM para PM
@@ -109,3 +92,23 @@ const addAlarme = () => {
 }
 
 // btnAlarme.addEventListener('click', addAlarme);
+addAlarme();
+
+setInterval(() => {
+    let date = new Date(),
+    horas =  date.getHours(),
+    minutos = date.getMinutes(),
+    segundos = data.getSeconds(),
+    amp = 'AM'
+
+    if(horas >= 12){
+        horas = horas -12;
+        amp = 'PM';
+    }
+    horas = horas == 0? horas = 12: horas;
+    horas = horas < 10? '0' + horas: horas;
+    minutos = minutos < 10? '0' + minutos: minutos;
+    segundos = segundos < 10? '0' + segundos: segundos;
+
+    currentTime.innerHTML = `${horas}:${minutos}:${segundos}`
+})
