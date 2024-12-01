@@ -63,6 +63,13 @@ const addAlarme = () => {
     const pm = document.querySelector('.PM');
 
     const selectMenu =  document.querySelectorAll('select');
+    setInterval(() => {
+        let Dte = new Date(),
+        horas =  Date.getHours(),
+        minutos = Date.getMinutes(),
+        segundos = getSeconds(),
+        amp = 'PM'
+    })
     //let ampm = '';
     
     //Mudar o horário de AM para PM
