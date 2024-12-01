@@ -162,7 +162,7 @@ body{
         border-radius: 10px;
         margin: 20px 0;
         padding: 20px;
-        width: 325px;
+        width: 370px;
         text-align: center;
         color: #fff;
         font-size: 20px;
@@ -205,6 +205,7 @@ body{
         & .list-alarme{
             width: 100%;
             display: flex;
+            justify-content: space-between;
             gap: 4px;
             & .coluns{
                 width: 100%;
@@ -212,6 +213,14 @@ body{
                 font-size: 15px;
                 margin: 10px 0px;
                 border-radius: 5px;
+
+                & option{
+                    
+                    cursor: pointer;
+                    &:hover{
+                        color: #533E2D;
+                    }
+                }
             }
         }
         & .set-Alarme{
