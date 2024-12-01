@@ -66,49 +66,24 @@ const addAlarme = () => {
    
     //let ampm = '';
     
-    //Mudar o horário de AM para PM
-//    am.addEventListener('click', () => {
-//         //Para colocar as horas na primeira select
-//         for (let h = 12; h > 0; h--) {
-//             if(h < 10){
-//                 h = `0${h}`;
-//             }
-//             let option = `<option value="${h}">${h}</option>`;
-//             select[0].firstElementChild.insertAdjacentHTML("afterend", option);
-//         }
+    // Mudar o horário de AM para PM
+   am.addEventListener('click', () => {
+        //Para colocar as horas na primeira select
+        for (let h = 12; h > 0; h--) {
+           h = h < 10? `0${h}`: h;
+            let option = `<option value="${h}">${h}</option>`;
+            select[0].firstElementChild.insertAdjacentHTML("afterend", option);
+        }
         
-//         //Para colocar os minutos no segundo select
-//         for (let m = 59; m > 0; m--) {
-//             if(m < 10){
-//                 m = `0${m}`;
-//             }
-//             console.log(m);
-//             let option1 = `<option value="${m}">${m}</option>`;
-//             select[1].firstElementChild.insertAdjacentHTML("afterend", option1);
-//         }
+        //Para colocar os minutos no segundo select
+        for (let m = 59; m > 0; m--) {
+            m = m < 10? `0${m}`: m;
+            let option1 = `<option value="${m}">${m}</option>`;
+            select[1].firstElementChild.insertAdjacentHTML("afterend", option1);
+        }
 
-//     });
+    });
     
 }
 
-// btnAlarme.addEventListener('click', addAlarme);
-addAlarme();
-
-setInterval(() => {
-    let date = new Date(),
-    horas =  date.getHours(),
-    minutos = date.getMinutes(),
-    segundos = data.getSeconds(),
-    amp = 'AM'
-
-    if(horas >= 12){
-        horas = horas -12;
-        amp = 'PM';
-    }
-    horas = horas == 0? horas = 12: horas;
-    horas = horas < 10? '0' + horas: horas;
-    minutos = minutos < 10? '0' + minutos: minutos;
-    segundos = segundos < 10? '0' + segundos: segundos;
-
-    currentTime.innerHTML = `${horas}:${minutos}:${segundos}`
-})
+btnAlarme.addEventListener('click', addAlarme);
