@@ -11,7 +11,7 @@ const milsEl = document.querySelector("#mls");
 const numbers = document.querySelector("#number");
 const btnLimpar = document.querySelector('#limpar-crono');
 
-let tempo = 0;
+let tempo = 0;//
 let intervalo;
 let rodando = false;
 
