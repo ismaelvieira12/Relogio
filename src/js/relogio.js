@@ -60,6 +60,7 @@ const addAlarme = () => {
     placyMarkRelogio.appendChild(btnAddAlarme);
     // const currentTime = document.querySelector('#currentTime');
     const selectMenu =  document.querySelectorAll('select');
+    let isAlarmSet, alarmeTime, ringTong;
     
     // Mudar o horário de AM para PM
     //Para colocar as horas na primeira select
@@ -84,7 +85,27 @@ const addAlarme = () => {
         selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option1);
     }
 
+    function setAlarme() {
+        if(isAlarmSet){
+            alarmeTime = '';
+            ringTong.pause();
+
+            return isAlarmSet = false;
+        }
+
+        let time = `${selectMenu[0].value} : ${selectMenu[1].value} : ${selectMenu[2].value}`;
+        if(time.includes("Hour") || time.includes("Minutes") || time.includes("AM/PM")){
+            return alert('Insira horas e minutos válidos por favor!');
+        }
+
+        alarmeTime = time;
+        isAlarmSet = true;
+
+    }
+
+    btnAddAlarme.addEventListener('click', setAlarme);
     
 }
 
 btnAlarme.addEventListener('click', addAlarme);
+
