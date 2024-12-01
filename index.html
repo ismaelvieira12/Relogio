@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/css/style.css">
-    <title>Relogio</title>
-    <link rel="shortcut icon" href="src/img/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <div class="placy-Mark-relogio">
-        <div class="box-mark-relogio">
-            <h3>Alarmes</h3>
-            <button class="btn-limpar" id="addAlarme">Add</button>
-        </div>
-        <div><h1 id="currentTime">00:00:00</h1></div>
-        <div class="list-alarme hidden">
-            <div>
-                <select class="coluns">
-                    <option value="hour" hidden>Horas</option>
-                </select>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./src/css/style.css">
+        <title>Relogio</title>
+        <link rel="shortcut icon" href="src/img/favicon.svg" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="placy-Mark-relogio">
+            <div class="box-mark-relogio">
+                <h3>Alarmes</h3>
+                <button class="btn-limpar" id="addAlarme"><i class="fa-solid fa-plus"></i></button>
             </div>
-            <div>
-                <select class="coluns">
-                    <option value="minut" hidden>Minutos</option>
-                </select>
+            <div><h1 id="currentTime">00:00:00</h1></div>
+            <div class="list-alarme hidden">
+                <div>
+                    <select class="coluns">
+                        <option value="hour" hidden>Horas</option>
+                    </select>
+                </div>
+                <div>
+                    <select class="coluns">
+                        <option value="minut" hidden>Minutos</option>
+                    </select>
+                </div>
+                <div>
+                    <select class="coluns">
+                        <p>AM/PM</p>
+                        <option class="AM">AM/PM</option>
+                        <!-- <option class="PM">PM</option> -->
+                    </select>
+                </div>
             </div>
-            <div>
-                <select class="coluns">
-                    <p>AM/PM</p>
-                    <option class="AM">AM/PM</option>
-                    <!-- <option class="PM">PM</option> -->
-                </select>
-            </div>
-        </div>
-        
     </div>
     <main class="container">
         <div class="options">
@@ -79,7 +78,6 @@
         </div>
         <ul id="record-list"></ul>
     </div>
-
     <script src="src/js/relogio.js"></script>
     <script src="src/js/cronometro.js"></script>
 
