@@ -10,7 +10,6 @@ const placyMarks = document.querySelector('.placy-Mark');
 const placyMarkRelogio = document.querySelector('.placy-Mark-relogio');
 const btnAlarme = document.querySelector("#addAlarme");
 const alarmaList = document.querySelector(".list-alarme");
-const select = document.querySelectorAll('select');
 
 const swapTurn = () => {
     console.log('Teste');
@@ -56,11 +55,9 @@ const addAlarme = () => {
     alarmaList.style.display='flex';
     alarmaList.classList.remove('hidden');
     const btnAddAlarme = document.createElement('button');
-    btnAddAlarme.innerHTML = 'Add Alarme';
+    btnAddAlarme.innerHTML = '<button class="set-Alarme" id="addTask">Add Alarme</button>';
     btnAddAlarme.classList.add('set-Alarme');
     placyMarkRelogio.appendChild(btnAddAlarme);
-    // const am = document.querySelector('.AM');
-    // const pm = document.querySelector('.PM');
     // const currentTime = document.querySelector('#currentTime');
     const selectMenu =  document.querySelectorAll('select');
     
@@ -81,8 +78,9 @@ const addAlarme = () => {
     }
 
     for (let i = 2; i > 0; i--) {
+        ampm = i === 1 ? "AM" : "PM";
         i = i < 10 ? `0${i}`: i;
-        let option1 = `<option value="${i}">${i}</option>`;
+        let option1 = `<option value="${ampm}">${ampm}</option>`;
         selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option1);
     }
 
