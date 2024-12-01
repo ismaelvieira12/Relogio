@@ -59,30 +59,33 @@ const addAlarme = () => {
     btnAddAlarme.innerHTML = 'Add Alarme';
     btnAddAlarme.classList.add('set-Alarme');
     placyMarkRelogio.appendChild(btnAddAlarme);
-    const am = document.querySelector('.AM');
-    const pm = document.querySelector('.PM');
-    const currentTime = document.querySelector('#currentTime');
+    // const am = document.querySelector('.AM');
+    // const pm = document.querySelector('.PM');
+    // const currentTime = document.querySelector('#currentTime');
     const selectMenu =  document.querySelectorAll('select');
-   
-    //let ampm = '';
     
     // Mudar o horário de AM para PM
-   am.addEventListener('click', () => {
-        //Para colocar as horas na primeira select
-        for (let h = 12; h > 0; h--) {
-           h = h < 10? `0${h}`: h;
-            let option = `<option value="${h}">${h}</option>`;
-            select[0].firstElementChild.insertAdjacentHTML("afterend", option);
-        }
-        
-        //Para colocar os minutos no segundo select
-        for (let m = 59; m > 0; m--) {
-            m = m < 10? `0${m}`: m;
-            let option1 = `<option value="${m}">${m}</option>`;
-            select[1].firstElementChild.insertAdjacentHTML("afterend", option1);
-        }
+    //Para colocar as horas na primeira select
 
-    });
+    for (let h = 12; h > 0; h--) {
+        h = h < 10 ? `0${h}`: h;
+        let option = `<option value="${h}">${h}</option>`;
+        selectMenu[0].firstElementChild.insertAdjacentHTML("afterend", option);
+    }
+    
+    //Para colocar os minutos no segundo select
+    for (let m = 59; m > 0; m--) {
+        m = m < 10 ? `0${m}`: m;
+        let option1 = `<option value="${m}">${m}</option>`;
+        selectMenu[1].firstElementChild.insertAdjacentHTML("afterend", option1);
+    }
+
+    for (let i = 2; i > 0; i--) {
+        i = i < 10 ? `0${i}`: i;
+        let option1 = `<option value="${i}">${i}</option>`;
+        selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option1);
+    }
+
     
 }
 
