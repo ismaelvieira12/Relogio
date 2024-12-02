@@ -134,14 +134,18 @@ const addAlarme = () => {
         let ulEl = document.createElement('ul');
         let li = document.createElement('li');
         let trash = document.createElement('a');
-        ulEl.appendChild(trash);
-        ulEl.appendChild(li);
         li.innerHTML = `${time}`;
         trash.innerHTML='<i class="fa-solid fa-trash"></i>';
+        ulEl.appendChild(li);
+        li.appendChild(trash);
         placyMarkRelogio.appendChild(ulEl);
 
 
         ulEl.style.display='flex';
+        ulEl.style.justifyContent='space-between';
+        
+        li.style.width='100%';
+        
     }
 
     btnAddAlarme.addEventListener('click', setAlarme);
