@@ -213,7 +213,7 @@ body{
                 font-size: 12px;
                 margin: 10px 0px;
                 border-radius: 5px;
-                
+
                 & option{
                     cursor: pointer;
                     &:hover{
@@ -222,6 +222,7 @@ body{
                 }
             }
         }
+
         & .set-Alarme{
             width: 100%;
             height: 50px;
