@@ -10,7 +10,8 @@ const placyMarks = document.querySelector('.placy-Mark');
 const placyMarkRelogio = document.querySelector('.placy-Mark-relogio');
 const btnAlarme = document.querySelector("#addAlarme");
 const alarmaList = document.querySelector(".list-alarme");
-
+let isAlarmSet, alarmeTime, ringTong = new Audio("src/img/audio.mp3");
+let alertt = new Audio('src/img/alerta.mp3');
 const swapTurn = () => {
     console.log('Teste');
     containerField.classList.remove('hidden');
@@ -47,6 +48,7 @@ const relogio = setInterval(() =>{
     hora.textContent = h;
     minuto.textContent = m;
     segundo.textContent = s; 
+
 });
 
 
@@ -58,12 +60,36 @@ const addAlarme = () => {
     btnAddAlarme.innerHTML = '<button class="set-Alarme" id="addTask">Add Alarme</button>';
     btnAddAlarme.classList.add('set-Alarme');
     placyMarkRelogio.appendChild(btnAddAlarme);
-    // const currentTime = document.querySelector('#currentTime');
+    const currentTime = document.querySelector('#currentTime');
     const selectMenu =  document.querySelectorAll('select');
-    let isAlarmSet, alarmeTime, ringTong = new Audio("src/img/audio.mp3");
     
     // Mudar o horário de AM para PM
     //Para colocar as horas na primeira select
+
+    setInterval(() => {
+        let date = new Date(),
+        hours = date.getHours(),
+        minutes = date.getMinutes(),
+        seconds = date.getSeconds(),
+        ampm ="AM";
+
+        if(hours >= 12){
+            hours = hours - 12;
+            ampm = "PM";
+        }
+
+        hours = hours == 0 ? hours = 12 : hours;
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        currentTime.innerHTML = `${hours}:${minutes}:${seconds}`;
+
+        if(alarmeTime === `${hora}:${minuto}:${ampm}`){
+            ringTong.play();
+            ringTong.loop;
+        }
+    })
 
     for (let h = 12; h > 0; h--) {
         h = h < 10 ? `0${h}`: h;
@@ -95,12 +121,21 @@ const addAlarme = () => {
 
         let time = `${selectMenu[0].value} : ${selectMenu[1].value} : ${selectMenu[2].value}`;
         if(time.includes("Hour") || time.includes("Minutes") || time.includes("AM/PM")){
-            ringTong.play();
+            alertt.play();
             return alert('Insira horas e minutos válidos por favor!');
+        }else{
+            alert(`Alarme add com sucesso para: ${time}`);
         }
 
         alarmeTime = time;
         isAlarmSet = true;
+
+
+        let ulEl = document.createElement('ul');
+        let li = document.createElement('li');
+        li.innerHTML = `${time}`;
+        ulEl.appendChild(li);
+        placyMarkRelogio.appendChild(ulEl);
 
     }
 
