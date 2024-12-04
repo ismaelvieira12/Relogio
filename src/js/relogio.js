@@ -144,7 +144,7 @@ const addAlarme = () => {
         // ulEl.style.display='flex';
         // ulEl.style.justifyContent='space-between';
         
-        li.style.width='100%';
+        // li.style.width='100%';
         
     }
 
