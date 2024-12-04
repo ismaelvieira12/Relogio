@@ -141,8 +141,8 @@ const addAlarme = () => {
         placyMarkRelogio.appendChild(ulEl);
 
 
-        ulEl.style.display='flex';
-        ulEl.style.justifyContent='space-between';
+        // ulEl.style.display='flex';
+        // ulEl.style.justifyContent='space-between';
         
         li.style.width='100%';
         
