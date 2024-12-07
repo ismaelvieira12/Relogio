@@ -142,6 +142,7 @@ const addAlarme = () => {
 
         li.style.marginBotto='5px';
         
+        // Função para excluir a lista de alarmes.
         trash.addEventListener('click', () => {
             let res = confirm('Tem certeza que deseja excluir?');
             if(res == true){
