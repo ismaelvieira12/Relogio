@@ -146,7 +146,8 @@ const addAlarme = () => {
     trash.addEventListener('click', () => {
         let res = confirm('Tem certeza que deseja excluir?');
         if(res == true){
-            const = ulEl.
+            const ulEl = document.createElement('ul');
+            ulEl.innerHTML='';
         }
     })
     btnAddAlarme.addEventListener('click', setAlarme);
