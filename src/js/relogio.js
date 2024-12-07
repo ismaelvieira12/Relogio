@@ -134,7 +134,7 @@ const addAlarme = () => {
         let ulEl = document.createElement('ul');
         let li = document.createElement('li');
         let trash = document.createElement('a');
-        
+        trash.style.cursor='pointer';
         li.innerHTML = `${time}`;
         trash.innerHTML='<i class="fa-solid fa-trash"></i>';
         ulEl.appendChild(li);
