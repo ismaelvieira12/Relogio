@@ -142,14 +142,13 @@ const addAlarme = () => {
 
         li.style.marginBotto='5px';
         
+        trash.addEventListener('click', () => {
+            let res = confirm('Tem certeza que deseja excluir?');
+            if(res == true){
+                ulEl.innerHTML='';
+            }
+        })
     }
-    trash.addEventListener('click', () => {
-        let res = confirm('Tem certeza que deseja excluir?');
-        if(res == true){
-            const ulEl = document.createElement('ul');
-            ulEl.innerHTML='';
-        }
-    })
     btnAddAlarme.addEventListener('click', setAlarme);
     
 }
