@@ -140,14 +140,15 @@ const addAlarme = () => {
         li.appendChild(trash);
         placyMarkRelogio.appendChild(ulEl);
 
-
-        // ulEl.style.display='flex';
-        // ulEl.style.justifyContent='space-between';
-        
-        // li.style.width='100%';
+        li.style.marginBotto='5px';
         
     }
-
+    trash.addEventListener('click', () => {
+        let res = confirm('Tem certeza que deseja excluir?');
+        if(res == true){
+            const = ulEl.
+        }
+    })
     btnAddAlarme.addEventListener('click', setAlarme);
     
 }

@@ -237,6 +237,7 @@ body{
             cursor: pointer;
             color: #fff;
             transition:  background-color 0.1s;
+            
             &:hover{
                 background-color: #533E2D;
             }
