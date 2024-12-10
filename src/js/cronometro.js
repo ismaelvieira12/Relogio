@@ -13,7 +13,7 @@ const btnLimpar = document.querySelector('#limpar-crono');
 
 let tempo = 0;//
 let intervalo;//iniciando o intervalo vazio
-let rodando = false;
+let rodando = false; // indicará se a função está ativa ou não 
 
 let hours = 0;
 let minutes = 0;
