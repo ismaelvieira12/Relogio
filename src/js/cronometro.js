@@ -12,7 +12,7 @@ const numbers = document.querySelector("#number");
 const btnLimpar = document.querySelector('#limpar-crono');
 
 let tempo = 0;//
-let intervalo;
+let intervalo;//iniciando o intervalo vazio
 let rodando = false;
 
 let hours = 0;
