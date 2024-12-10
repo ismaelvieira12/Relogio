@@ -35,6 +35,8 @@ const startTimerStopGame = () => {
     if(rodando){
         clearInterval(intervalo);
         rodando = false;
+        //quando a variavel rodando for false, iniciaremos o cronometro e
+        //mudaremos o ícone de play para pouse
         play.innerHTML= '<i class="fa-solid fa-play"></i>';
 
     }else{
