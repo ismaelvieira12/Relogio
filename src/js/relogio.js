@@ -127,7 +127,7 @@ const addAlarme = () => {
             alert(`Alarme add com sucesso para: ${time}`);
         }
 
-        alarmeTime = time;
+        //alarmeTime = time;
         isAlarmSet = true;
 
 
