@@ -121,14 +121,14 @@ const addAlarme = () => {
 
         let time = `${selectMenu[0].value} : ${selectMenu[1].value} : ${selectMenu[2].value}`;
         if(time.includes("hora") || time.includes("minuto") || time.includes("AM/PM")){
-            alert.play();
+            alertt.play();
             return alert('Insira horas e minutos válidos por favor!');
         }else{
             alert(`Alarme add com sucesso para: ${time}`);
         }
 
-        //alarmeTime = time;
-        //isAlarmSet = true;
+        alarmeTime = time;
+        isAlarmSet = true;
 
 
         let ulEl = document.createElement('ul');
