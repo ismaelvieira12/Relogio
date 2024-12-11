@@ -85,7 +85,7 @@ const addAlarme = () => {
 
         currentTime.innerHTML = `${hours}:${minutes}:${seconds}`;
 
-        if(alarmeTime === `${hora}:${minuto}:${ampm}`){
+        if(currentTime === `${hora}:${minuto}:${ampm}`){
             ringTong.play();
             ringTong.loop;
         }
