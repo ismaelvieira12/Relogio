@@ -127,8 +127,8 @@ const addAlarme = () => {
             alert(`Alarme add com sucesso para: ${time}`);
         }
 
-        alarmeTime = time;
-        isAlarmSet = true;
+        //alarmeTime = time;
+        //isAlarmSet = true;
 
 
         let ulEl = document.createElement('ul');

@@ -12,8 +12,8 @@ const numbers = document.querySelector("#number");
 const btnLimpar = document.querySelector('#limpar-crono');
 
 let tempo = 0;//
-let intervalo;
-let rodando = false;
+let intervalo;//iniciando o intervalo vazio
+let rodando = false; // indicará se a função está ativa ou não 
 
 let hours = 0;
 let minutes = 0;
@@ -35,6 +35,8 @@ const startTimerStopGame = () => {
     if(rodando){
         clearInterval(intervalo);
         rodando = false;
+        //quando a variavel rodando for false, iniciaremos o cronometro e
+        //mudaremos o ícone de play para pouse
         play.innerHTML= '<i class="fa-solid fa-play"></i>';
 
     }else{
