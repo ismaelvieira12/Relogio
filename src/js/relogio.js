@@ -91,7 +91,7 @@ const addAlarme = () => {
         }
     })
 
-    //for (let h = 12; h > 0; h--) {
+    for (let h = 12; h > 0; h--) {
         h = h < 10 ? `0${h}`: h;
         let option = `<option value="${h}">${h}</option>`;
         selectMenu[0].firstElementChild.insertAdjacentHTML("afterend", option);
@@ -128,7 +128,7 @@ const addAlarme = () => {
         }
 
         alarmeTime = time;
-        isAlarmSet = true;
+        // isAlarmSet = true;
 
 
         let ulEl = document.createElement('ul');
