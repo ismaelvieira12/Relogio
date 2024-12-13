@@ -88,6 +88,7 @@ const addAlarme = () => {
        
 
         currentTime.innerHTML = `${hours}:${minutes}:${seconds}`;
+        console.log(currentTime);
     })
 
     for (let h = 12; h > 0; h--) {
@@ -123,10 +124,10 @@ const addAlarme = () => {
             alertt.play();
             return alert('Insira horas e minutos válidos por favor!');
         }else{
-            if(time ===  ){
-                ringTong.play();
-                ringTong.loop;
-            }
+            // if(time ===  `${}`){
+            //     ringTong.play();
+            //     ringTong.loop;
+            // }
 
             alert(`Alarme add com sucesso para: ${time}`);
         }
