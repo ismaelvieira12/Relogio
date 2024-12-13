@@ -67,7 +67,7 @@ const addAlarme = () => {
     // Mudar o horário de AM para PM
     //Para colocar as horas na primeira select
 
-    setInterval(() => {
+   const teste = setInterval(() => {
         let date = new Date(),
         hours = date.getHours(),
         minutes = date.getMinutes(),
@@ -85,12 +85,9 @@ const addAlarme = () => {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        currentTime.innerHTML = `${hours}:${minutes}:${seconds}`;
+       
 
-        if(alarmeTime === `${hora}:${minuto}:${ampm}` && currentTime === alarmeTime){
-            ringTong.play();
-            ringTong.loop;
-        }
+        currentTime.innerHTML = `${hours}:${minutes}:${seconds}`;
     })
 
     for (let h = 12; h > 0; h--) {
@@ -126,6 +123,11 @@ const addAlarme = () => {
             alertt.play();
             return alert('Insira horas e minutos válidos por favor!');
         }else{
+            if(time ===  ){
+                ringTong.play();
+                ringTong.loop;
+            }
+
             alert(`Alarme add com sucesso para: ${time}`);
         }
 
@@ -138,7 +140,7 @@ const addAlarme = () => {
         let trash = document.createElement('a');
         trash.style.cursor='pointer';
         trash.style.color="#B88B4A"
-        li.innerHTML = `${time}`;
+        li.innerHTML = `${time}, ${currentTime}`;
         trash.innerHTML='<i class="fa-solid fa-trash"></i>';
         ulEl.appendChild(li);
         li.appendChild(trash);
