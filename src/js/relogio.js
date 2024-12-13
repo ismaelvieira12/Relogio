@@ -87,7 +87,7 @@ const addAlarme = () => {
 
         currentTime.innerHTML = `${hours}:${minutes}:${seconds}`;
 
-        if(alarmeTime === `${hora}:${minuto}:${ampm}`){
+        if(alarmeTime === `${hora}:${minuto}:${ampm}` && currentTime === alarmeTime){
             ringTong.play();
             ringTong.loop;
         }
@@ -122,7 +122,7 @@ const addAlarme = () => {
         }
 
         let time = `${selectMenu[0].value} : ${selectMenu[1].value} : ${selectMenu[2].value}`;
-        if(time.includes("hours") || time.includes("minutes") || time.includes("ampm")){
+        if(time.includes("Horas") || time.includes("minutos") || time.includes("AM/PM")){
             alertt.play();
             return alert('Insira horas e minutos válidos por favor!');
         }else{
