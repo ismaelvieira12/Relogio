@@ -85,10 +85,8 @@ const addAlarme = () => {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-       
-
         currentTime.innerHTML = `${hours}:${minutes}:${seconds}`;
-    })
+    });
 
     for (let h = 12; h > 0; h--) {
         h = h < 10 ? `0${h}`: h;
@@ -109,7 +107,6 @@ const addAlarme = () => {
         let option1 = `<option value="${ampm}">${ampm}</option>`;
         selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option1);
     }
-
     function setAlarme() {
         if(isAlarmSet){
             alarmeTime = '';
@@ -128,7 +125,8 @@ const addAlarme = () => {
             //     ringTong.loop;
             // }
 
-            alert(`Alarme add com sucesso para: ${teste}`);
+            alert(`Alarme add com sucesso para: ${time}`);
+            console.log(testes)
         }
 
         alarmeTime = time;
@@ -140,7 +138,7 @@ const addAlarme = () => {
         let trash = document.createElement('a');
         trash.style.cursor='pointer';
         trash.style.color="#B88B4A"
-        li.innerHTML = `${time}, ${currentTime}`;
+        li.innerHTML = `${time}`;
         trash.innerHTML='<i class="fa-solid fa-trash"></i>';
         ulEl.appendChild(li);
         li.appendChild(trash);
