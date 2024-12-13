@@ -10,7 +10,8 @@ const placyMarks = document.querySelector('.placy-Mark');
 const placyMarkRelogio = document.querySelector('.placy-Mark-relogio');
 const btnAlarme = document.querySelector("#addAlarme");
 const alarmaList = document.querySelector(".list-alarme");
-let isAlarmSet, alarmeTime, ringTong = new Audio("src/img/audio.mp3");
+let isAlarmSet, alarmeTime; 
+let ringTong = new Audio("src/img/audio.mp3");
 let alertt = new Audio('src/img/alerta.mp3');
 const swapTurn = () => {
     console.log('Teste');
@@ -73,7 +74,7 @@ const addAlarme = () => {
         seconds = date.getSeconds(),
         ampm ="AM";
         let alarmeTime;
-        
+
         if(hours >= 12){
             hours = hours - 12;
             ampm = "PM";
@@ -121,7 +122,7 @@ const addAlarme = () => {
         }
 
         let time = `${selectMenu[0].value} : ${selectMenu[1].value} : ${selectMenu[2].value}`;
-        if(time.includes("hora") || time.includes("minuto") || time.includes("AM/PM")){
+        if(time.includes("hours") || time.includes("minutes") || time.includes("ampm")){
             alertt.play();
             return alert('Insira horas e minutos válidos por favor!');
         }else{
