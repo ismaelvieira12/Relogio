@@ -72,7 +72,8 @@ const addAlarme = () => {
         minutes = date.getMinutes(),
         seconds = date.getSeconds(),
         ampm ="AM";
-
+        let alarmeTime;
+        
         if(hours >= 12){
             hours = hours - 12;
             ampm = "PM";
