@@ -88,7 +88,6 @@ const addAlarme = () => {
        
 
         currentTime.innerHTML = `${hours}:${minutes}:${seconds}`;
-        console.log(currentTime);
     })
 
     for (let h = 12; h > 0; h--) {
@@ -129,7 +128,7 @@ const addAlarme = () => {
             //     ringTong.loop;
             // }
 
-            alert(`Alarme add com sucesso para: ${time}`);
+            alert(`Alarme add com sucesso para: ${teste}`);
         }
 
         alarmeTime = time;
