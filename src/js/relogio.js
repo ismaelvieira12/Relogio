@@ -30,7 +30,7 @@ const swapTurnInve = () => {
 relElement.addEventListener('click', swapTurn);
 cronometro.addEventListener('click', swapTurnInve);
 
-const relogio = setInterval((h, m) =>{
+const relogio = setInterval((horas, minutos) =>{
     let time = new Date();
     let h = time.getHours();
     let m = time.getMinutes();
@@ -48,18 +48,19 @@ const relogio = setInterval((h, m) =>{
     minuto.textContent = m;
     segundo.textContent = s; 
 
-
-    return alarma(h, m);
+    // if(h == horas|| minutos == m){
+    //     ringTong.play();
+    // }
+    console.log(horas).value;
 });
 
-function alarma(h ,m){
+function alarma(){
     const horas = prompt('coloque uma hora').value;
     const minutos = prompt('coloque um minuto').value;
-    if(h == horas|| minutos == m){
-        ringTong.play();
-    }
+    console.log(horas);
+    relogio(horas, minutos);
 }
-
+alarma();
 
 // const addAlarme = () => {
 //     btnAlarme.style.display = 'none';
