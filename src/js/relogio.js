@@ -120,7 +120,7 @@ const addAlarme = () => {
             alertt.play();
             return alert('Insira horas e minutos válidos por favor!');
         }else{
-            if(time ===  `${}`){
+           // if(time ===  `${}`){
             //    ringTong.play();
             //     ringTong.loop;
             //}
