@@ -33,7 +33,7 @@ cronometro.addEventListener('click', swapTurnInve);
 
 const relogio = setInterval(() =>{
     let time = new Date();
-
+    
     let h = time.getHours();
     let m = time.getMinutes();
     let s = time.getSeconds();
@@ -53,110 +53,110 @@ const relogio = setInterval(() =>{
 });
 
 
-const addAlarme = () => {
-    btnAlarme.style.display = 'none';
-    alarmaList.style.display='flex';
-    alarmaList.classList.remove('hidden');
-    const btnAddAlarme = document.createElement('button');
-    btnAddAlarme.innerHTML = '<button class="set-Alarme" id="addTask">Add Alarme</button>';
-    btnAddAlarme.classList.add('set-Alarme');
-    placyMarkRelogio.appendChild(btnAddAlarme);
-    const currentTime = document.querySelector('#currentTime');
-    const selectMenu =  document.querySelectorAll('select');
+// const addAlarme = () => {
+//     btnAlarme.style.display = 'none';
+//     alarmaList.style.display='flex';
+//     alarmaList.classList.remove('hidden');
+//     const btnAddAlarme = document.createElement('button');
+//     btnAddAlarme.innerHTML = '<button class="set-Alarme" id="addTask">Add Alarme</button>';
+//     btnAddAlarme.classList.add('set-Alarme');
+//     placyMarkRelogio.appendChild(btnAddAlarme);
+//     const currentTime = document.querySelector('#currentTime');
+//     const selectMenu =  document.querySelectorAll('select');
     
-    // Mudar o horário de AM para PM
-    //Para colocar as horas na primeira select
+//     // Mudar o horário de AM para PM
+//     //Para colocar as horas na primeira select
 
-   const teste = setInterval(() => {
-        let date = new Date(),
-        hours = date.getHours(),
-        minutes = date.getMinutes(),
-        seconds = date.getSeconds(),
-        ampm ="AM";
-        let alarmeTime;
+//    const teste = setInterval(() => {
+//         let date = new Date(),
+//         hours = date.getHours(),
+//         minutes = date.getMinutes(),
+//         seconds = date.getSeconds(),
+//         ampm ="AM";
+//         let alarmeTime;
 
-        if(hours >= 12){
-            hours = hours - 12;
-            ampm = "PM";
-        }
+//         if(hours >= 12){
+//             hours = hours - 12;
+//             ampm = "PM";
+//         }
 
-        hours = hours == 0 ? hours = 12 : hours;
-        hours = hours < 10 ? "0" + hours : hours;
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
+//         hours = hours == 0 ? hours = 12 : hours;
+//         hours = hours < 10 ? "0" + hours : hours;
+//         minutes = minutes < 10 ? "0" + minutes : minutes;
+//         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        currentTime.innerHTML = `${hours}:${minutes}:${seconds}`;
-    });
+//         currentTime.innerHTML = `${hours}:${minutes}:${seconds}`;
+//     });
 
-    for (let h = 12; h > 0; h--) {
-        h = h < 10 ? `0${h}`: h;
-        let option = `<option value="${h}">${h}</option>`;
-        selectMenu[0].firstElementChild.insertAdjacentHTML("afterend", option);
-    }
+//     for (let h = 12; h > 0; h--) {
+//         h = h < 10 ? `0${h}`: h;
+//         let option = `<option value="${h}">${h}</option>`;
+//         selectMenu[0].firstElementChild.insertAdjacentHTML("afterend", option);
+//     }
     
-    //Para colocar os minutos no segundo select
-    for (let m = 59; m > 0; m--) {
-        m = m < 10 ? `0${m}`: m;
-        let option1 = `<option value="${m}">${m}</option>`;
-        selectMenu[1].firstElementChild.insertAdjacentHTML("afterend", option1);
-    }
+//     //Para colocar os minutos no segundo select
+//     for (let m = 59; m > 0; m--) {
+//         m = m < 10 ? `0${m}`: m;
+//         let option1 = `<option value="${m}">${m}</option>`;
+//         selectMenu[1].firstElementChild.insertAdjacentHTML("afterend", option1);
+//     }
 
-    for (let i = 2; i > 0; i--) {
-        ampm = i === 1 ? "AM" : "PM";
-        i = i < 10 ? `0${i}`: i;
-        let option1 = `<option value="${ampm}">${ampm}</option>`;
-        selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option1);
-    }
-    function setAlarme() {
-        if(isAlarmSet){
-            alarmeTime = '';
-            ringTong.pause();
+//     for (let i = 2; i > 0; i--) {
+//         ampm = i === 1 ? "AM" : "PM";
+//         i = i < 10 ? `0${i}`: i;
+//         let option1 = `<option value="${ampm}">${ampm}</option>`;
+//         selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option1);
+//     }
+//     function setAlarme() {
+//         if(isAlarmSet){
+//             alarmeTime = '';
+//             ringTong.pause();
 
-            return isAlarmSet = false;
-        }
+//             return isAlarmSet = false;
+//         }
 
-        let time = `${selectMenu[0].value} : ${selectMenu[1].value} : ${selectMenu[2].value}`;
-        if(time.includes("Horas") || time.includes("minutos") || time.includes("AM/PM")){
-            alertt.play();
-            return alert('Insira horas e minutos válidos por favor!');
-        }else{
-           // if(time ===  `${}`){
-            //    ringTong.play();
-            //     ringTong.loop;
-            //}
+//         let time = `${selectMenu[0].value} : ${selectMenu[1].value} : ${selectMenu[2].value}`;
+//         if(time.includes("Horas") || time.includes("minutos") || time.includes("AM/PM")){
+//             alertt.play();
+//             return alert('Insira horas e minutos válidos por favor!');
+//         }else{
+//            // if(time ===  `${}`){
+//             //    ringTong.play();
+//             //     ringTong.loop;
+//             //}
 
-            alert(`Alarme add com sucesso para: ${time}`);
-            console.log(teste)
-        }
+//             alert(`Alarme add com sucesso para: ${time}`);
+//             console.log(teste)
+//         }
 
-        // alarmeTime = time;
-        // isAlarmSet = true;
+//         // alarmeTime = time;
+//         // isAlarmSet = true;
 
 
-        let ulEl = document.createElement('ul');
-        let li = document.createElement('li');
-        let trash = document.createElement('a');
-        trash.style.cursor='pointer';
-        trash.style.color="#B88B4A"
-        li.innerHTML = `${time}`;
-        trash.innerHTML='<i class="fa-solid fa-trash"></i>';
-        ulEl.appendChild(li);
-        li.appendChild(trash);
-        placyMarkRelogio.appendChild(ulEl);
+//         let ulEl = document.createElement('ul');
+//         let li = document.createElement('li');
+//         let trash = document.createElement('a');
+//         trash.style.cursor='pointer';
+//         trash.style.color="#B88B4A"
+//         li.innerHTML = `${time}`;
+//         trash.innerHTML='<i class="fa-solid fa-trash"></i>';
+//         ulEl.appendChild(li);
+//         li.appendChild(trash);
+//         placyMarkRelogio.appendChild(ulEl);
 
-        li.style.marginBotto='5px';
+//         li.style.marginBotto='5px';
         
-        // Função para excluir a lista de alarmes.
-        trash.addEventListener('click', () => {
-            let res = confirm('Tem certeza que deseja excluir?');
-            if(res == true){
-                ulEl.innerHTML='';
-            }
-        })
-    }
-    btnAddAlarme.addEventListener('click', setAlarme);
+//         // Função para excluir a lista de alarmes.
+//         trash.addEventListener('click', () => {
+//             let res = confirm('Tem certeza que deseja excluir?');
+//             if(res == true){
+//                 ulEl.innerHTML='';
+//             }
+//         })
+//     }
+//     btnAddAlarme.addEventListener('click', setAlarme);
     
-}
+// }
 
 btnAlarme.addEventListener('click', addAlarme);
 
