@@ -123,7 +123,7 @@ const addAlarme = () => {
             if(time ===  `${}`){
                 ringTong.play();
                  ringTong.loop;
-            }
+            //}
 
             alert(`Alarme add com sucesso para: ${time}`);
             console.log(teste)
