@@ -51,14 +51,13 @@ const relogio = setInterval((horas, minutos) =>{
     // if(h == horas|| minutos == m){
     //     ringTong.play();
     // }
-    console.log(horas).value;
 });
 
 function alarma(){
     const horas = prompt('coloque uma hora').value;
     const minutos = prompt('coloque um minuto').value;
-    console.log(horas);
-    relogio(horas, minutos);
+    console.log('sua hora é', + horas);
+    // relogio(horas, minutos);
 }
 alarma();
 
