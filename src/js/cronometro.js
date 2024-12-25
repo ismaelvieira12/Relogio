@@ -1,5 +1,5 @@
 //const play = document.querySelector("#play");
-const refresh = document.querySelector("#refresh");
+//const refresh = document.querySelector("#refresh");
 const pouse = document.querySelector('.pause');
 const save = document.querySelector("#save");
 const timer = document.querySelector("#timer");
