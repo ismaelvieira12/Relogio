@@ -1,4 +1,4 @@
-const play = document.querySelector("#play");
+//const play = document.querySelector("#play");
 const refresh = document.querySelector("#refresh");
 const pouse = document.querySelector('.pause');
 const save = document.querySelector("#save");
