@@ -102,26 +102,26 @@ const addAlarme = () => {
         selectMenu[0].firstElementChild.insertAdjacentHTML("afterend", option);
     }
     
-//     //Para colocar os minutos no segundo select
+//Para colocar os minutos no segundo select
     for (let m = 59; m > 0; m--) {
         m = m < 10 ? `0${m}`: m;
         let option1 = `<option value="${m}">${m}</option>`;
         selectMenu[1].firstElementChild.insertAdjacentHTML("afterend", option1);
     }
 
-//     for (let i = 2; i > 0; i--) {
-//         ampm = i === 1 ? "AM" : "PM";
-//         i = i < 10 ? `0${i}`: i;
-//         let option1 = `<option value="${ampm}">${ampm}</option>`;
-//         selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option1);
-//     }
-//     function setAlarme() {
-//         if(isAlarmSet){
-//             alarmeTime = '';
-//             ringTong.pause();
+    for (let i = 2; i > 0; i--) {
+        ampm = i === 1 ? "AM" : "PM";
+        i = i < 10 ? `0${i}`: i;
+        let option1 = `<option value="${ampm}">${ampm}</option>`;
+        selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option1);
+    }
+    function setAlarme() {
+        if(isAlarmSet){
+            alarmeTime = '';
+            ringTong.pause();
 
-//             return isAlarmSet = false;
-//         }
+            return isAlarmSet = false;
+        }
 
 //         let time = `${selectMenu[0].value} : ${selectMenu[1].value} : ${selectMenu[2].value}`;
 //         if(time.includes("Horas") || time.includes("minutos") || time.includes("AM/PM")){
