@@ -61,16 +61,16 @@ function alarma(){
 }
 alarma();
 
-// const addAlarme = () => {
-//     btnAlarme.style.display = 'none';
-//     alarmaList.style.display='flex';
-//     alarmaList.classList.remove('hidden');
-//     const btnAddAlarme = document.createElement('button');
-//     btnAddAlarme.innerHTML = '<button class="set-Alarme" id="addTask">Add Alarme</button>';
-//     btnAddAlarme.classList.add('set-Alarme');
-//     placyMarkRelogio.appendChild(btnAddAlarme);
-//     const currentTime = document.querySelector('#currentTime');
-//     const selectMenu =  document.querySelectorAll('select');
+const addAlarme = () => {
+    btnAlarme.style.display = 'none';
+    alarmaList.style.display='flex';
+    alarmaList.classList.remove('hidden');
+    const btnAddAlarme = document.createElement('button');
+    btnAddAlarme.innerHTML = '<button class="set-Alarme" id="addTask">Add Alarme</button>';
+    btnAddAlarme.classList.add('set-Alarme');
+    placyMarkRelogio.appendChild(btnAddAlarme);
+    const currentTime = document.querySelector('#currentTime');
+    const selectMenu =  document.querySelectorAll('select');
     
 //     // Mudar o horário de AM para PM
 //     //Para colocar as horas na primeira select
