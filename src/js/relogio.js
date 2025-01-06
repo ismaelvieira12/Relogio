@@ -72,8 +72,8 @@ const addAlarme = () => {
     const currentTime = document.querySelector('#currentTime');
     const selectMenu =  document.querySelectorAll('select');
     
-//     // Mudar o horário de AM para PM
-//     //Para colocar as horas na primeira select
+    // Mudar o horário de AM para PM
+    //Para colocar as horas na primeira select
 
    const teste = setInterval(() => {
         let date = new Date(),
