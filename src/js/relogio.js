@@ -54,12 +54,6 @@ const relogio = setInterval(() =>{
     console.log('sua hora é', + horas);
 });
 
-// function alarma(){
-//     let horas = prompt('coloque uma hora');
-//     let minutos = prompt('coloque um minuto').value;
-//     relogio(horas);
-// }
-// alarma();
 
 const addAlarme = () => {
     btnAlarme.style.display = 'none';
