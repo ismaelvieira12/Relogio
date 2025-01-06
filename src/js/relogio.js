@@ -48,9 +48,9 @@ const relogio = setInterval(() =>{
     minuto.textContent = m;
     segundo.textContent = s; 
 
-    if(h == horas|| minutos == m){
-        ringTong.play();
-    }
+    // if(h == horas|| minutos == m){
+    //     ringTong.play();
+    // }
     console.log('sua hora é', + horas);
 });
 
