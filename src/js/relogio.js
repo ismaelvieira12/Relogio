@@ -123,15 +123,15 @@ const addAlarme = () => {
             return isAlarmSet = false;
         }
 
-//         let time = `${selectMenu[0].value} : ${selectMenu[1].value} : ${selectMenu[2].value}`;
-//         if(time.includes("Horas") || time.includes("minutos") || time.includes("AM/PM")){
-//             alertt.play();
-//             return alert('Insira horas e minutos válidos por favor!');
-//         }else{
-//            // if(time ===  `${}`){
-//             //    ringTong.play();
-//             //     ringTong.loop;
-//             //}
+        let time = `${selectMenu[0].value} : ${selectMenu[1].value} : ${selectMenu[2].value}`;
+        if(time.includes("Horas") || time.includes("minutos") || time.includes("AM/PM")){
+            alertt.play();
+            return alert('Insira horas e minutos válidos por favor!');
+        }else{
+           // if(time ===  `${}`){
+            //    ringTong.play();
+            //     ringTong.loop;
+            //}
 
 //             alert(`Alarme add com sucesso para: ${time}`);
 //             console.log(teste)
