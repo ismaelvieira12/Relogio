@@ -103,11 +103,11 @@ const addAlarme = () => {
     }
     
 //     //Para colocar os minutos no segundo select
-//     for (let m = 59; m > 0; m--) {
-//         m = m < 10 ? `0${m}`: m;
-//         let option1 = `<option value="${m}">${m}</option>`;
-//         selectMenu[1].firstElementChild.insertAdjacentHTML("afterend", option1);
-//     }
+    for (let m = 59; m > 0; m--) {
+        m = m < 10 ? `0${m}`: m;
+        let option1 = `<option value="${m}">${m}</option>`;
+        selectMenu[1].firstElementChild.insertAdjacentHTML("afterend", option1);
+    }
 
 //     for (let i = 2; i > 0; i--) {
 //         ampm = i === 1 ? "AM" : "PM";
