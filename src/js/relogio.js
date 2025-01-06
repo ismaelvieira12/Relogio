@@ -128,17 +128,17 @@ const addAlarme = () => {
             alertt.play();
             return alert('Insira horas e minutos válidos por favor!');
         }else{
-           // if(time ===  `${}`){
-            //    ringTong.play();
-            //     ringTong.loop;
-            //}
+           if(time ===  `${}`){
+               ringTong.play();
+                ringTong.loop;
+            }
 
-//             alert(`Alarme add com sucesso para: ${time}`);
-//             console.log(teste)
-//         }
+            alert(`Alarme add com sucesso para: ${time}`);
+            console.log(teste)
+        }
 
-//         // alarmeTime = time;
-//         // isAlarmSet = true;
+        // alarmeTime = time;
+        // isAlarmSet = true;
 
 
 //         let ulEl = document.createElement('ul');
