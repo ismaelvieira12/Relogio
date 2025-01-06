@@ -75,18 +75,18 @@ const addAlarme = () => {
 //     // Mudar o horário de AM para PM
 //     //Para colocar as horas na primeira select
 
-//    const teste = setInterval(() => {
-//         let date = new Date(),
-//         hours = date.getHours(),
-//         minutes = date.getMinutes(),
-//         seconds = date.getSeconds(),
-//         ampm ="AM";
-//         let alarmeTime;
+   const teste = setInterval(() => {
+        let date = new Date(),
+        hours = date.getHours(),
+        minutes = date.getMinutes(),
+        seconds = date.getSeconds(),
+        ampm ="AM";
+        let alarmeTime;
 
-//         if(hours >= 12){
-//             hours = hours - 12;
-//             ampm = "PM";
-//         }
+        if(hours >= 12){
+            hours = hours - 12;
+            ampm = "PM";
+        }
 
 //         hours = hours == 0 ? hours = 12 : hours;
 //         hours = hours < 10 ? "0" + hours : hours;
