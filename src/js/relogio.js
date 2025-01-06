@@ -128,7 +128,7 @@ const addAlarme = () => {
             alertt.play();
             return alert('Insira horas e minutos válidos por favor!');
         }else{
-           if(time ===  `${}`){
+           if(time ===  `${we}`){
                ringTong.play();
                 ringTong.loop;
             }
@@ -141,30 +141,30 @@ const addAlarme = () => {
         // isAlarmSet = true;
 
 
-//         let ulEl = document.createElement('ul');
-//         let li = document.createElement('li');
-//         let trash = document.createElement('a');
-//         trash.style.cursor='pointer';
-//         trash.style.color="#B88B4A"
-//         li.innerHTML = `${time}`;
-//         trash.innerHTML='<i class="fa-solid fa-trash"></i>';
-//         ulEl.appendChild(li);
-//         li.appendChild(trash);
-//         placyMarkRelogio.appendChild(ulEl);
+        let ulEl = document.createElement('ul');
+        let li = document.createElement('li');
+        let trash = document.createElement('a');
+        trash.style.cursor='pointer';
+        trash.style.color="#B88B4A"
+        li.innerHTML = `${time}`;
+        trash.innerHTML='<i class="fa-solid fa-trash"></i>';
+        ulEl.appendChild(li);
+        li.appendChild(trash);
+        placyMarkRelogio.appendChild(ulEl);
 
-//         li.style.marginBotto='5px';
+        li.style.marginBotto='5px';
         
-//         // Função para excluir a lista de alarmes.
-//         trash.addEventListener('click', () => {
-//             let res = confirm('Tem certeza que deseja excluir?');
-//             if(res == true){
-//                 ulEl.innerHTML='';
-//             }
-//         })
-//     }
-//     btnAddAlarme.addEventListener('click', setAlarme);
+        // Função para excluir a lista de alarmes.
+        trash.addEventListener('click', () => {
+            let res = confirm('Tem certeza que deseja excluir?');
+            if(res == true){
+                ulEl.innerHTML='';
+            }
+        })
+    }
+    btnAddAlarme.addEventListener('click', setAlarme);
     
-// }
+}
 
 btnAlarme.addEventListener('click', addAlarme);
 
