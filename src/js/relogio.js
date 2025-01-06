@@ -54,12 +54,12 @@ const relogio = setInterval(() =>{
     console.log('sua hora é', + horas);
 });
 
-function alarma(){
-    let horas = prompt('coloque uma hora');
-    let minutos = prompt('coloque um minuto').value;
-    relogio(horas);
-}
-alarma();
+// function alarma(){
+//     let horas = prompt('coloque uma hora');
+//     let minutos = prompt('coloque um minuto').value;
+//     relogio(horas);
+// }
+// alarma();
 
 const addAlarme = () => {
     btnAlarme.style.display = 'none';
@@ -126,7 +126,6 @@ const addAlarme = () => {
         let time = `${selectMenu[0].value} : ${selectMenu[1].value} : ${selectMenu[2].value}`;
         if(time.includes("Horas") || time.includes("minutos") || time.includes("AM/PM")){
             alertt.play();
-            return alert('Insira horas e minutos válidos por favor!');
         }else{
            if(time ===  `${we}`){
                ringTong.play();
