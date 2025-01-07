@@ -51,7 +51,7 @@ const relogio = setInterval(() =>{
     // if(h == horas|| minutos == m){
     //     ringTong.play();
     // }
-    console.log('sua hora é', + horas);
+    console.log('sua hora é', h);
 });
 
 
