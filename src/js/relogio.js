@@ -30,6 +30,7 @@ const swapTurnInve = () => {
 relElement.addEventListener('click', swapTurn);
 cronometro.addEventListener('click', swapTurnInve);
 
+//Relogio prini
 const relogio = setInterval(() => {
     let time = new Date();
     hora.textContent = time.getHours().toString().padStart(2, '0');
@@ -58,7 +59,7 @@ const addAlarme = () => {
         minutes = date.getMinutes(),
         seconds = date.getSeconds(),
         ampm ="AM";
-        let alarmeTime;
+        // let alarmeTime;
 
         if(hours >= 12){
             hours = hours - 12;
@@ -110,11 +111,11 @@ const addAlarme = () => {
              
 
             alert(`Alarme add com sucesso para: ${time}`);
-            console.log(teste)
+            // console.log(teste)
         }
 
-        alarmeTime = time;
-        isAlarmSet = true;
+        // alarmeTime = time;
+        // isAlarmSet = true;
 
 
         let ulEl = document.createElement('ul');
