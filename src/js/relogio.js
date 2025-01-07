@@ -10,8 +10,7 @@ const placyMarks = document.querySelector('.placy-Mark');
 const placyMarkRelogio = document.querySelector('.placy-Mark-relogio');
 const btnAlarme = document.querySelector("#addAlarme");
 const alarmaList = document.querySelector(".list-alarme");
-let isAlarmSet = false;
-let alarmeTime = ""; 
+let isAlarmSet, alarmeTime; 
 let ringTong = new Audio("src/img/audio.mp3");
 let alertt = new Audio('src/img/alerta.mp3');
 const swapTurn = () => {
@@ -31,27 +30,12 @@ const swapTurnInve = () => {
 relElement.addEventListener('click', swapTurn);
 cronometro.addEventListener('click', swapTurnInve);
 
-//Relogio principal
+//Relogio prinicipal
 const relogio = setInterval(() => {
     let time = new Date();
-    let hours = time.getHours();
-    let minutes = time.getMinutes();
-    let seconds = time.getSeconds();
-    let ampm = hours >= 12 ? 'PM' : 'AM';
-
-    hours = hours % 12 || 12; // Converte para formato 12h
-    let currentTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} ${ampm}`;
-
-    hora.textContent = hours.toString().padStart(2, '0');
-    minuto.textContent = minutes.toString().padStart(2, '0');
-    segundo.textContent = seconds.toString().padStart(2, '0');
-
-    // ✅ Comparação corrigida para o alarme tocar
-    if (isAlarmSet && currentTime === alarmeTime) {
-        ringTong.play();
-        ringTong.loop = true;
-        alert('Alarme disparado!');
-    }
+    hora.textContent = time.getHours().toString().padStart(2, '0');
+    minuto.textContent = time.getMinutes().toString().padStart(2, '0');
+    segundo.textContent = time.getSeconds().toString().padStart(2, '0');
 }, 1000);
 
 
@@ -96,7 +80,7 @@ const addAlarme = () => {
         selectMenu[0].firstElementChild.insertAdjacentHTML("afterend", option);
     }
     
-//Para colocar os minutos no segundo select
+// 5
     for (let m = 59; m >= 0; m--) {
         m = m < 10 ? `0${m}`: m;
         let option1 = `<option value="${m}">${m}</option>`;
