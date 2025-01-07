@@ -121,10 +121,10 @@ const addAlarme = () => {
         if(time.includes("Horas") || time.includes("minutos") || time.includes("AM/PM")){
             alertt.play();
         }else{
-           if(time ===  `${we}`){
-               ringTong.play();
-                ringTong.loop;
-            }
+            if(time === alarmeTime){ 
+                ringTong.play();
+             }
+             
 
             alert(`Alarme add com sucesso para: ${time}`);
             console.log(teste)
