@@ -64,27 +64,71 @@ const addAlarme = () => {
     btnAddAlarme.classList.add('set-Alarme');
     placyMarkRelogio.appendChild(btnAddAlarme);
     const currentTime = document.querySelector('#currentTime');
-    // const selectMenu =  document.querySelectorAll('select');
+    const selectMenu =  document.querySelectorAll('select');
     
     // Mudar o horário de AM para PM
     //Para colocar as horas na primeira select
 
-    const selectMenu = document.querySelectorAll('select');
-    let hours = selectMenu[0].value;
-    let minutes = selectMenu[1].value;
-    let ampm = selectMenu[2].value;
+   const teste = setInterval(() => {
+        let date = new Date(),
+        hours = date.getHours(),
+        minutes = date.getMinutes(),
+        seconds = date.getSeconds(),
+        ampm ="AM";
+        // let alarmeTime;
 
-    if (hours === "Horas" || minutes === "Minutos" || ampm === "AM/PM") {
-        alertt.play();
-        alert("Por favor, selecione um horário válido!");
-        return;
+        if(hours >= 12){
+            hours = hours - 12;
+            ampm = "PM";
+        }
+
+        hours = hours == 0 ? hours = 12 : hours;
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        currentTime.innerHTML = `${hours}:${minutes}:${seconds}`;
+    });
+
+    for (let h = 12; h >= 1; h--) {
+        h = h < 10 ? `0${h}`: h;
+        let option = `<option value="${h}">${h}</option>`;
+        selectMenu[0].firstElementChild.insertAdjacentHTML("afterend", option);
+    }
+    
+//Para colocar os minutos no segundo select
+    for (let m = 59; m >= 0; m--) {
+        m = m < 10 ? `0${m}`: m;
+        let option1 = `<option value="${m}">${m}</option>`;
+        selectMenu[1].firstElementChild.insertAdjacentHTML("afterend", option1);
     }
 
-    alarmeTime = `${hours}:${minutes} ${ampm}`;
-    isAlarmSet = true;
+    for (let i = 2; i > 0; i--) {
+        ampm = i === 1 ? "AM" : "PM";
+        i = i < 10 ? `0${i}`: i;
+        let option1 = `<option value="${ampm}">${ampm}</option>`;
+        selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option1);
+    }
+    function setAlarme() {
+        if(isAlarmSet){
+            alarmeTime = '';
+            ringTong.pause();
 
-    alert(`Alarme adicionado para: ${alarmeTime}`);
+            return isAlarmSet = false;
+        }
 
+        let time = `${selectMenu[0].value} : ${selectMenu[1].value} : ${selectMenu[2].value}`;
+        if(time.includes("Horas") || time.includes("minutos") || time.includes("AM/PM")){
+            alertt.play();
+        }else{
+            if(time === alarmeTime){ 
+                ringTong.play();
+             }
+             
+
+            alert(`Alarme add com sucesso para: ${time}`);
+            // console.log(teste)
+        }
 
         // alarmeTime = time;
         // isAlarmSet = true;
