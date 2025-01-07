@@ -69,27 +69,12 @@ const addAlarme = () => {
     // Mudar o horário de AM para PM
     //Para colocar as horas na primeira select
 
-   const teste = setInterval(() => {
-        let date = new Date(),
-        hours = date.getHours(),
-        minutes = date.getMinutes(),
-        seconds = date.getSeconds(),
-        ampm ="AM";
-        let alarmeTime;
-
-        if(hours >= 12){
-            hours = hours - 12;
-            ampm = "PM";
-        }
-
-        hours = hours == 0 ? hours = 12 : hours;
-        hours = hours < 10 ? "0" + hours : hours;
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        currentTime.innerHTML = `${hours}:${minutes}:${seconds}`;
-    });
-
+    const relogio = setInterval(() => {
+        let time = new Date();
+        hora.textContent = time.getHours().toString().padStart(2, '0');
+        minuto.textContent = time.getMinutes().toString().padStart(2, '0');
+        segundo.textContent = time.getSeconds().toString().padStart(2, '0');
+    }, 1000);
     for (let h = 12; h >= 1; h--) {
         h = h < 10 ? `0${h}`: h;
         let option = `<option value="${h}">${h}</option>`;
