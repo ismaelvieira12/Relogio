@@ -9,3 +9,5 @@ OBS:  PODE TER FUNÇÕES AINDA NAO TERMINADAS
 ### Cronômetro
 ![image](https://github.com/user-attachments/assets/b73447fc-8bec-46af-8272-f6039583870c)
  
+```js
+const teste = 'testando
